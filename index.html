@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rashi Gupta – Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              pastelBlue: '#f0f7ff',
+              pastelPurple: '#f6f0ff',
+              deepPurple: '#5b21b6',
+              lightText: '#555',
+            },
+            fontFamily: {
+              sans: ['Manrope', 'Noto Sans', 'sans-serif'],
+            },
+            animation: {
+              bounceIn: 'bounceIn 0.6s ease-out',
+            },
+            keyframes: {
+              bounceIn: {
+                '0%': { transform: 'scale(0.5)', opacity: '0' },
+                '60%': { transform: 'scale(1.05)', opacity: '1' },
+                '100%': { transform: 'scale(1)', opacity: '1' },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  </head>
+
+  <body class="bg-gradient-to-br from-pastelBlue to-pastelPurple font-sans text-gray-800">
+    <div class="max-w-4xl mx-auto py-10 px-6">
+      <header class="text-center">
+        <h1 class="text-3xl font-extrabold text-deepPurple">Sophia Bennett</h1>
+        <p class="text-md text-lightText mt-1">Principal Software Engineer</p>
+        <p class="text-sm text-lightText">Boston, MA</p>
+      </header>
+
+      <section class="mt-10">
+        <h2 class="text-xl font-bold text-deepPurple mb-2">About Me</h2>
+        <p class="text-lightText">
+          Technical leader with deep experience in full stack development, system architecture, and leading large-scale digital solutions. Passionate about mentoring,
+          problem-solving, and continuous improvement across SDLC and cloud platforms.
+        </p>
+      </section>
+
+      <section class="mt-8">
+        <h2 class="text-xl font-bold text-deepPurple mb-2">Skills</h2>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-white px-3 py-1 rounded-full text-sm shadow"><i class="fab fa-js"></i> JavaScript</span>
+          <span class="bg-white px-3 py-1 rounded-full text-sm shadow"><i class="fab fa-react"></i> React</span>
+          <span class="bg-white px-3 py-1 rounded-full text-sm shadow"><i class="fas fa-database"></i> SQL Server</span>
+          <span class="bg-white px-3 py-1 rounded-full text-sm shadow"><i class="fab fa-aws"></i> AWS</span>
+          <span class="bg-white px-3 py-1 rounded-full text-sm shadow"><i class="fab fa-microsoft"></i> Azure</span>
+          <span class="bg-white px-3 py-1 rounded-full text-sm shadow"><i class="fas fa-code"></i> .NET Core</span>
+          <span class="bg-white px-3 py-1 rounded-full text-sm shadow"><i class="fab fa-node-js"></i> Node.js</span>
+          <span class="bg-white px-3 py-1 rounded-full text-sm shadow"><i class="fas fa-robot"></i> Power Platform</span>
+          <span class="bg-white px-3 py-1 rounded-full text-sm shadow"><i class="fas fa-chart-line"></i> Tableau</span>
+          <span class="bg-white px-3 py-1 rounded-full text-sm shadow"><i class="fas fa-file-code"></i> Angular</span>
+        </div>
+        <button onclick="openSkillModal()" class="mt-3 text-blue-600 text-sm hover:underline">Show All Skills</button>
+      </section>
+
+      <section class="mt-8">
+        <h2 class="text-xl font-bold text-deepPurple mb-2">Experience</h2>
+        <div class="space-y-3">
+          <button onclick="openExperienceModal('kbr')" class="w-full text-left bg-white p-4 rounded-lg shadow hover:bg-blue-50">
+            <h3 class="text-md font-semibold">KBR / FAA</h3>
+            <p class="text-sm text-lightText">Principal Software Engineer (2018–Present)</p>
+          </button>
+          <button onclick="openExperienceModal('tr')" class="w-full text-left bg-white p-4 rounded-lg shadow hover:bg-blue-50">
+            <h3 class="text-md font-semibold">Thomson Reuters</h3>
+            <p class="text-sm text-lightText">Senior Software Engineer (2018)</p>
+          </button>
+          <button onclick="openExperienceModal('bch')" class="w-full text-left bg-white p-4 rounded-lg shadow hover:bg-blue-50">
+            <h3 class="text-md font-semibold">Boston Children's Hospital</h3>
+            <p class="text-sm text-lightText">App Dev Specialist III (2012–2018)</p>
+          </button>
+          <button onclick="openExperienceModal('mgh')" class="w-full text-left bg-white p-4 rounded-lg shadow hover:bg-blue-50">
+            <h3 class="text-md font-semibold">Massachusetts General Hospital</h3>
+            <p class="text-sm text-lightText">Info Support Coordinator (2010–2015)</p>
+          </button>
+        </div>
+      </section>
+
+      <section class="mt-8">
+        <h2 class="text-xl font-bold text-deepPurple mb-2">Education</h2>
+        <ul class="text-lightText text-sm space-y-1">
+          <li><strong>MS in Textile Engineering</strong>, IIT Delhi, India</li>
+          <li><strong>BS in Textile Technology</strong>, UP Technical University, India</li>
+          <li><strong>Oracle Certified Associate</strong>, Oracle University</li>
+        </ul>
+      </section>
+
+      <section class="mt-8">
+        <h2 class="text-xl font-bold text-deepPurple mb-2">Contact</h2>
+        <p class="text-lightText">📧 sophie@gmail.com</p>
+        <p class="text-lightText">🔗 linkedin.com/in/sohphie</p>
+      </section>
+    </div>
+
+    <!-- Skill Modal -->
+    <div id="skillModal" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden flex items-center justify-center z-50">
+      <div class="bg-white rounded-2xl shadow-lg p-6 max-w-lg w-full animate-bounceIn">
+        <div class="flex justify-between items-center mb-3">
+          <h3 class="text-lg font-bold text-deepPurple">All Skills</h3>
+          <button onclick="closeSkillModal()" class="text-xl font-bold text-gray-500 hover:text-black">&times;</button>
+        </div>
+        <div class="text-sm text-gray-700 grid grid-cols-2 gap-2 max-h-96 overflow-y-auto">
+          <span>JavaScript</span><span>React</span><span>Angular</span><span>Node.js</span><span>.NET Core</span>
+          <span>C#</span><span>SQL Server</span><span>Azure</span><span>AWS</span><span>Power Platform</span>
+          <span>PL/SQL</span><span>Flutter</span><span>XAML</span><span>EF Core</span><span>SSRS/SSIS</span>
+          <span>Postman</span><span>DocuSign</span><span>ArcGIS</span><span>Dialogflow</span><span>Llama2</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience Modal -->
+    <div id="experienceModal" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden flex items-center justify-center z-50">
+      <div class="bg-white rounded-2xl shadow-lg p-6 max-w-xl w-full animate-bounceIn">
+        <div class="flex justify-between items-center mb-3">
+          <h3 class="text-lg font-bold text-deepPurple" id="expTitle">Experience</h3>
+          <button onclick="closeExperienceModal()" class="text-xl font-bold text-gray-500 hover:text-black">&times;</button>
+        </div>
+        <ul id="expDetails" class="list-disc ml-5 text-sm text-gray-700 space-y-1"></ul>
+      </div>
+    </div>
+
+    <script>
+      function openSkillModal() {
+        document.getElementById('skillModal').classList.remove('hidden');
+      }
+      function closeSkillModal() {
+        document.getElementById('skillModal').classList.add('hidden');
+      }
+
+      const experienceData = {
+        kbr: {
+          title: 'KBR / FAA',
+          bullets: [
+            'Built low-code Canvas app in PowerApps.',
+            'Led .NET 8 upgrade, completed 2 weeks early.',
+            'Integrated ArcGIS Maps and DocuSign in Angular apps.',
+            'Improved page load from 2 min to 2 sec using hashmap.',
+            'Cut API testing time 10x using Postman.',
+            'Converted stored procedures to LINQ using EF Core.',
+            'Resolved critical bugs before release deadlines.',
+            'Delivered 4-month feature in 4 weeks with OOP principles.',
+            'Created chat app using Llama 2 & RAG architecture.',
+            'Mentored new hires and juniors.'
+          ]
+        },
+        tr: {
+          title: 'Thomson Reuters',
+          bullets: [
+            'Developed eBillingHub, processed 4M invoices annually.',
+            'Mastered legacy tech quickly to meet urgent deadlines.',
+            'Maintained 100% unit test coverage.',
+            'Advanced Azure PaaS expertise to finish ahead of schedule.'
+          ]
+        },
+        bch: {
+          title: "Boston Children's Hospital",
+          bullets: [
+            'Led CardioBilling & C3PO-QI system adoption by 20 hospitals.',
+            'Built SSRS/Tableau dashboards, automated ETL workflows.',
+            'Created Cath Billing tracker with AngularJS/Web API.',
+            'Reduced data collection by 50% with auto-import features.'
+          ]
+        },
+        mgh: {
+          title: 'Massachusetts General Hospital',
+          bullets: [
+            'Developed IVR Health Talker using VXML/.NET.',
+            'Migrated systems to Azure, made 200K+ calls in a month.'
+          ]
+        }
+      };
+
+      function openExperienceModal(company) {
+        const data = experienceData[company];
+        document.getElementById('expTitle').textContent = data.title;
+        const list = document.getElementById('expDetails');
+        list.innerHTML = data.bullets.map(item => `<li>${item}</li>`).join('');
+        document.getElementById('experienceModal').classList.remove('hidden');
+      }
+
+      function closeExperienceModal() {
+        document.getElementById('experienceModal').classList.add('hidden');
+      }
+    </script>
+  </body>
+</html>
