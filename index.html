@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Rashi Gupta – Profile</title>
+    <title>Rashi Gupta – Principal Software Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -14,172 +14,864 @@
               pastelPurple: '#f6f0ff',
               deepPurple: '#5b21b6',
               lightText: '#555',
+              accent: '#6366f1',
+              dark: '#1f2937',
             },
             fontFamily: {
-              sans: ['Manrope', 'Noto Sans', 'sans-serif'],
+              sans: ['Inter', 'Manrope', 'Noto Sans', 'sans-serif'],
             },
             animation: {
+              fadeIn: 'fadeIn 0.6s ease-out',
+              slideUp: 'slideUp 0.5s ease-out',
               bounceIn: 'bounceIn 0.6s ease-out',
+              float: 'float 3s ease-in-out infinite',
             },
             keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              slideUp: {
+                '0%': { opacity: '0', transform: 'translateY(30px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
               bounceIn: {
                 '0%': { transform: 'scale(0.5)', opacity: '0' },
                 '60%': { transform: 'scale(1.05)', opacity: '1' },
                 '100%': { transform: 'scale(1)', opacity: '1' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-10px)' },
               },
             },
           },
         },
       };
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   </head>
 
-  <body class="bg-gradient-to-br from-pastelBlue to-pastelPurple font-sans text-gray-800">
-    <div class="max-w-4xl mx-auto py-10 px-6">
-      <header class="text-center">
-        <h1 class="text-3xl font-extrabold text-deepPurple">Rashi Gupta</h1>
-        <p class="text-md text-lightText mt-1">Principal Software Engineer</p>
-        <p class="text-sm text-lightText">Boston, MA</p>
-      </header>
-
-      <section class="mt-10">
-        <h2 class="text-xl font-bold text-deepPurple mb-2">About Me</h2>
-        <p class="text-lightText">
-          Technical leader with deep experience in full stack development, system architecture, and leading large-scale digital solutions. Passionate about mentoring,
-          problem-solving, and continuous improvement across SDLC and cloud platforms.
-        </p>
-      </section>
-
-      <section class="mt-8">
-        <h2 class="text-xl font-bold text-deepPurple mb-2">Skills</h2>
-        <div class="flex flex-wrap gap-2">
-          <span class="bg-white px-3 py-1 rounded-full text-sm shadow"><i class="fab fa-js"></i> JavaScript</span>
-          <span class="bg-white px-3 py-1 rounded-full text-sm shadow"><i class="fab fa-react"></i> React</span>
-          <span class="bg-white px-3 py-1 rounded-full text-sm shadow"><i class="fas fa-database"></i> SQL Server</span>
-          <span class="bg-white px-3 py-1 rounded-full text-sm shadow"><i class="fab fa-aws"></i> AWS</span>
-          <span class="bg-white px-3 py-1 rounded-full text-sm shadow"><i class="fab fa-microsoft"></i> Azure</span>
-          <span class="bg-white px-3 py-1 rounded-full text-sm shadow"><i class="fas fa-code"></i> .NET Core</span>
-          <span class="bg-white px-3 py-1 rounded-full text-sm shadow"><i class="fab fa-node-js"></i> Node.js</span>
-          <span class="bg-white px-3 py-1 rounded-full text-sm shadow"><i class="fas fa-robot"></i> Power Platform</span>
-          <span class="bg-white px-3 py-1 rounded-full text-sm shadow"><i class="fas fa-chart-line"></i> Tableau</span>
-          <span class="bg-white px-3 py-1 rounded-full text-sm shadow"><i class="fas fa-file-code"></i> Angular</span>
-        </div>
-        <button onclick="openSkillModal()" class="mt-3 text-blue-600 text-sm hover:underline">Show All Skills</button>
-      </section>
-
-      <section class="mt-8">
-        <h2 class="text-xl font-bold text-deepPurple mb-2">Experience</h2>
-        <div class="space-y-3">
-          <button onclick="openExperienceModal('kbr')" class="w-full text-left bg-white p-4 rounded-lg shadow hover:bg-blue-50">
-            <h3 class="text-md font-semibold">KBR / FAA</h3>
-            <p class="text-sm text-lightText">Principal Software Engineer (2018–Present)</p>
-          </button>
-          <button onclick="openExperienceModal('tr')" class="w-full text-left bg-white p-4 rounded-lg shadow hover:bg-blue-50">
-            <h3 class="text-md font-semibold">Thomson Reuters</h3>
-            <p class="text-sm text-lightText">Senior Software Engineer (2018)</p>
-          </button>
-          <button onclick="openExperienceModal('bch')" class="w-full text-left bg-white p-4 rounded-lg shadow hover:bg-blue-50">
-            <h3 class="text-md font-semibold">Boston Children's Hospital</h3>
-            <p class="text-sm text-lightText">App Dev Specialist III (2012–2018)</p>
-          </button>
-          <button onclick="openExperienceModal('mgh')" class="w-full text-left bg-white p-4 rounded-lg shadow hover:bg-blue-50">
-            <h3 class="text-md font-semibold">Massachusetts General Hospital</h3>
-            <p class="text-sm text-lightText">Info Support Coordinator (2010–2015)</p>
+  <body class="bg-gradient-to-br from-gray-50 via-slate-100 to-blue-50 font-sans text-gray-800 min-h-screen">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-200/50">
+      <div class="max-w-6xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center">
+              <i class="fas fa-code text-white text-lg"></i>
+            </div>
+            <div>
+              <h1 class="text-xl font-bold text-gray-900">Rashi Gupta</h1>
+              <p class="text-xs text-gray-500">Principal Software Engineer</p>
+            </div>
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <button onclick="switchTab('about')" class="tab-btn active text-sm font-medium transition-colors">About</button>
+            <button onclick="switchTab('experience')" class="tab-btn text-sm font-medium transition-colors">Experience</button>
+            <button onclick="switchTab('skills')" class="tab-btn text-sm font-medium transition-colors">Skills</button>
+            <button onclick="switchTab('showcase')" class="tab-btn text-sm font-medium transition-colors">Web Systems</button>
+            <button onclick="switchTab('contact')" class="tab-btn text-sm font-medium transition-colors">Contact</button>
+          </div>
+          <button class="md:hidden" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars text-gray-600"></i>
           </button>
         </div>
-      </section>
+      </div>
+    </nav>
 
-      <section class="mt-8">
-        <h2 class="text-xl font-bold text-deepPurple mb-2">Education</h2>
-        <ul class="text-lightText text-sm space-y-1">
-          <li><strong>MS in Textile Engineering</strong>, IIT Delhi, India</li>
-          <li><strong>BS in Textile Technology</strong>, UP Technical University, India</li>
-          <li><strong>Oracle Certified Associate</strong>, Oracle University</li>
-        </ul>
-      </section>
-
-      <section class="mt-8">
-        <h2 class="text-xl font-bold text-deepPurple mb-2">Contact</h2>
-        <p class="text-lightText">📧 sophie@gmail.com</p>
-        <p class="text-lightText">🔗 linkedin.com/in/sohphie</p>
-      </section>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden bg-white border-b border-gray-200">
+      <div class="px-6 py-4 space-y-3">
+        <button onclick="switchTab('about')" class="mobile-tab-btn active w-full text-left py-2 px-3 rounded-lg transition-colors">About</button>
+        <button onclick="switchTab('experience')" class="mobile-tab-btn w-full text-left py-2 px-3 rounded-lg transition-colors">Experience</button>
+        <button onclick="switchTab('skills')" class="mobile-tab-btn w-full text-left py-2 px-3 rounded-lg transition-colors">Skills</button>
+        <button onclick="switchTab('showcase')" class="mobile-tab-btn w-full text-left py-2 px-3 rounded-lg transition-colors">Web Systems</button>
+        <button onclick="switchTab('contact')" class="mobile-tab-btn w-full text-left py-2 px-3 rounded-lg transition-colors">Contact</button>
+      </div>
     </div>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-6 py-8">
+      
+      <!-- About Tab -->
+      <div id="about" class="tab-content active animate-fadeIn">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6">
+            <div class="space-y-4">
+              <h2 class="text-4xl font-bold text-gray-900 leading-tight">
+                Technical Leader & 
+                <span class="bg-gradient-to-r from-slate-700 to-blue-700 bg-clip-text text-transparent">
+                  Full Stack Developer
+                </span>
+              </h2>
+              <p class="text-lg text-gray-600 leading-relaxed">
+                Principal Software Engineer with deep expertise in full stack development, system architecture, and leading large-scale digital solutions. Passionate about mentoring, problem-solving, and continuous improvement across SDLC and cloud platforms.
+              </p>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+              <div class="flex items-center space-x-2 text-gray-600">
+                <i class="fas fa-map-marker-alt text-slate-600"></i>
+                <span>Boston, MA</span>
+              </div>
+              <div class="flex items-center space-x-2 text-gray-600">
+                <i class="fas fa-briefcase text-slate-600"></i>
+                <span>10+ Years Experience</span>
+              </div>
+            </div>
+
+            <div class="flex space-x-4">
+              <button onclick="switchTab('experience')" class="bg-gradient-to-r from-slate-700 to-blue-700 text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                View Experience
+              </button>
+              <button onclick="switchTab('showcase')" class="border-2 border-slate-700 text-slate-700 px-6 py-3 rounded-xl font-medium hover:bg-slate-700 hover:text-white transition-all duration-300">
+                View Projects
+              </button>
+            </div>
+
+            <!-- Skills Glimpse -->
+            <div class="mt-8">
+              <h3 class="text-lg font-semibold text-gray-800 mb-4">Key Technologies</h3>
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div class="bg-white/80 backdrop-blur-sm rounded-lg p-3 border border-gray-200/50 hover:shadow-md transition-all duration-300">
+                  <div class="flex items-center space-x-2">
+                    <i class="fab fa-angular text-red-500 text-lg"></i>
+                    <span class="text-sm font-medium text-gray-700">Angular</span>
+                  </div>
+                </div>
+                <div class="bg-white/80 backdrop-blur-sm rounded-lg p-3 border border-gray-200/50 hover:shadow-md transition-all duration-300">
+                  <div class="flex items-center space-x-2">
+                    <i class="fas fa-code text-blue-600 text-lg"></i>
+                    <span class="text-sm font-medium text-gray-700">.NET Core</span>
+                  </div>
+                </div>
+                <div class="bg-white/80 backdrop-blur-sm rounded-lg p-3 border border-gray-200/50 hover:shadow-md transition-all duration-300">
+                  <div class="flex items-center space-x-2">
+                    <i class="fab fa-microsoft text-blue-500 text-lg"></i>
+                    <span class="text-sm font-medium text-gray-700">Azure</span>
+                  </div>
+                </div>
+                <div class="bg-white/80 backdrop-blur-sm rounded-lg p-3 border border-gray-200/50 hover:shadow-md transition-all duration-300">
+                  <div class="flex items-center space-x-2">
+                    <i class="fas fa-database text-green-600 text-lg"></i>
+                    <span class="text-sm font-medium text-gray-700">SQL Server</span>
+                  </div>
+                </div>
+              </div>
+              <button onclick="switchTab('skills')" class="mt-4 text-slate-700 text-sm font-medium hover:text-slate-800 transition-colors">
+                View all skills <i class="fas fa-arrow-right ml-1"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="relative">
+            <div class="bg-gradient-to-br from-indigo-600 via-blue-700 to-cyan-600 rounded-3xl p-8 text-white animate-float shadow-xl relative overflow-hidden">
+              <!-- Background Pattern -->
+              <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-cyan-600/20"></div>
+              <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
+              <div class="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-cyan-500/10 to-transparent rounded-full translate-y-12 -translate-x-12"></div>
+              
+              <div class="relative z-10 space-y-4">
+                <div class="flex items-center space-x-3">
+                  <i class="fas fa-trophy text-2xl text-yellow-400"></i>
+                  <h3 class="text-xl font-bold">Key Achievements</h3>
+                </div>
+                <ul class="space-y-3 text-sm">
+                  <li class="flex items-start space-x-3">
+                    <i class="fas fa-check-circle mt-1 text-white"></i>
+                    <span>Led .NET 8 upgrade completed 2 weeks early</span>
+                  </li>
+                  <li class="flex items-start space-x-3">
+                    <i class="fas fa-check-circle mt-1 text-white"></i>
+                    <span>Improved page load from 2 min to 2 sec</span>
+                  </li>
+                  <li class="flex items-start space-x-3">
+                    <i class="fas fa-check-circle mt-1 text-white"></i>
+                    <span>Cut API testing time 10x using Postman</span>
+                  </li>
+                  <li class="flex items-start space-x-3">
+                    <i class="fas fa-check-circle mt-1 text-white"></i>
+                    <span>Delivered 4-month feature in 4 weeks</span>
+                  </li>
+                  <li class="flex items-start space-x-3">
+                    <i class="fas fa-check-circle mt-1 text-white"></i>
+                    <span>Built eBillingHub processing 4M+ invoices annually</span>
+                  </li>
+                  <li class="flex items-start space-x-3">
+                    <i class="fas fa-check-circle mt-1 text-white"></i>
+                    <span>Led CardioBilling adoption by 20+ hospitals</span>
+                  </li>
+                  <li class="flex items-start space-x-3">
+                    <i class="fas fa-check-circle mt-1 text-white"></i>
+                    <span>Created AI chat app using Llama 2 & RAG</span>
+                  </li>
+                  <li class="flex items-start space-x-3">
+                    <i class="fas fa-check-circle mt-1 text-white"></i>
+                    <span>Maintained 100% unit test coverage</span>
+                  </li>
+                  <li class="flex items-start space-x-3">
+                    <i class="fas fa-check-circle mt-1 text-white"></i>
+                    <span>Reduced data collection by 50% with automation</span>
+                  </li>
+                  <li class="flex items-start space-x-3">
+                    <i class="fas fa-check-circle mt-1 text-white"></i>
+                    <span>Handled 200K+ automated calls monthly</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience Tab -->
+      <div id="experience" class="tab-content hidden">
+        <div class="space-y-8">
+          <div class="text-center space-y-4">
+            <h2 class="text-3xl font-bold text-gray-900">Professional Experience</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">A journey through diverse roles in healthcare, media, and aviation technology</p>
+          </div>
+          
+          <div class="grid gap-6">
+            <div onclick="openExperienceModal('kbr')" class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-l-4 border-indigo-500">
+              <div class="flex items-start justify-between">
+                <div class="space-y-2">
+                  <h3 class="text-xl font-bold text-gray-900">Principal Software Engineer</h3>
+                  <p class="text-indigo-600 font-medium">KBR / FAA</p>
+                  <p class="text-gray-500">2018 – Present</p>
+                </div>
+                <div class="bg-indigo-100 p-3 rounded-xl">
+                  <i class="fas fa-plane text-indigo-600 text-xl"></i>
+                </div>
+              </div>
+            </div>
+
+            <div onclick="openExperienceModal('tr')" class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-l-4 border-purple-500">
+              <div class="flex items-start justify-between">
+                <div class="space-y-2">
+                  <h3 class="text-xl font-bold text-gray-900">Senior Software Engineer</h3>
+                  <p class="text-purple-600 font-medium">Thomson Reuters</p>
+                  <p class="text-gray-500">2018</p>
+                </div>
+                <div class="bg-purple-100 p-3 rounded-xl">
+                  <i class="fas fa-newspaper text-purple-600 text-xl"></i>
+                </div>
+              </div>
+            </div>
+
+            <div onclick="openExperienceModal('bch')" class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-l-4 border-green-500">
+              <div class="flex items-start justify-between">
+                <div class="space-y-2">
+                  <h3 class="text-xl font-bold text-gray-900">App Dev Specialist III</h3>
+                  <p class="text-green-600 font-medium">Boston Children's Hospital</p>
+                  <p class="text-gray-500">2012 – 2018</p>
+                </div>
+                <div class="bg-green-100 p-3 rounded-xl">
+                  <i class="fas fa-hospital text-green-600 text-xl"></i>
+                </div>
+              </div>
+            </div>
+
+            <div onclick="openExperienceModal('mgh')" class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-l-4 border-blue-500">
+              <div class="flex items-start justify-between">
+                <div class="space-y-2">
+                  <h3 class="text-xl font-bold text-gray-900">Info Support Coordinator</h3>
+                  <p class="text-blue-600 font-medium">Massachusetts General Hospital</p>
+                  <p class="text-gray-500">2010 – 2015</p>
+                </div>
+                <div class="bg-blue-100 p-3 rounded-xl">
+                  <i class="fas fa-user-md text-blue-600 text-xl"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills Tab -->
+      <div id="skills" class="tab-content hidden">
+        <div class="space-y-8">
+          <div class="text-center space-y-4">
+            <h2 class="text-3xl font-bold text-gray-900">Technical Skills</h2>
+            <p class="text-gray-600">Comprehensive expertise across modern development technologies</p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white rounded-2xl p-6 shadow-lg">
+              <div class="flex items-center space-x-3 mb-4">
+                <i class="fas fa-code text-indigo-600 text-xl"></i>
+                <h3 class="text-lg font-bold text-gray-900">Frontend</h3>
+              </div>
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-600">React</span>
+                  <div class="w-20 bg-gray-200 rounded-full h-2">
+                    <div class="bg-indigo-600 h-2 rounded-full" style="width: 95%"></div>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-600">Angular</span>
+                  <div class="w-20 bg-gray-200 rounded-full h-2">
+                    <div class="bg-indigo-600 h-2 rounded-full" style="width: 90%"></div>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-600">JavaScript</span>
+                  <div class="w-20 bg-gray-200 rounded-full h-2">
+                    <div class="bg-indigo-600 h-2 rounded-full" style="width: 98%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-lg">
+              <div class="flex items-center space-x-3 mb-4">
+                <i class="fas fa-server text-purple-600 text-xl"></i>
+                <h3 class="text-lg font-bold text-gray-900">Backend</h3>
+              </div>
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-600">.NET Core</span>
+                  <div class="w-20 bg-gray-200 rounded-full h-2">
+                    <div class="bg-purple-600 h-2 rounded-full" style="width: 95%"></div>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-600">Node.js</span>
+                  <div class="w-20 bg-gray-200 rounded-full h-2">
+                    <div class="bg-purple-600 h-2 rounded-full" style="width: 85%"></div>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-600">C#</span>
+                  <div class="w-20 bg-gray-200 rounded-full h-2">
+                    <div class="bg-purple-600 h-2 rounded-full" style="width: 92%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-lg">
+              <div class="flex items-center space-x-3 mb-4">
+                <i class="fas fa-cloud text-blue-600 text-xl"></i>
+                <h3 class="text-lg font-bold text-gray-900">Cloud & DevOps</h3>
+              </div>
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-600">Azure</span>
+                  <div class="w-20 bg-gray-200 rounded-full h-2">
+                    <div class="bg-blue-600 h-2 rounded-full" style="width: 90%"></div>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-600">AWS</span>
+                  <div class="w-20 bg-gray-200 rounded-full h-2">
+                    <div class="bg-blue-600 h-2 rounded-full" style="width: 80%"></div>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-600">Power Platform</span>
+                  <div class="w-20 bg-gray-200 rounded-full h-2">
+                    <div class="bg-blue-600 h-2 rounded-full" style="width: 88%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button onclick="openSkillModal()" class="w-full bg-gradient-to-r from-slate-700 to-blue-700 text-white py-4 rounded-xl font-medium hover:shadow-lg transition-all duration-300">
+            View All Skills
+          </button>
+        </div>
+      </div>
+
+      <!-- Web Systems Showcase Tab -->
+      <div id="showcase" class="tab-content hidden">
+        <div class="space-y-8">
+          <div class="text-center space-y-4">
+            <h2 class="text-3xl font-bold text-gray-900">Web Systems Showcase</h2>
+            <p class="text-gray-600">Interactive demos of systems I've developed and contributed to</p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <!-- Analytics Tools -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative">
+              <a href="https://rgupta-code.github.io/AnalyticsTools/" target="_blank" rel="noopener noreferrer" class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm rounded-lg p-2 shadow-lg hover:bg-white transition-all duration-300 group">
+                <i class="fas fa-external-link-alt text-gray-600 group-hover:text-blue-600 text-sm"></i>
+              </a>
+              <div class="p-6 border-b border-gray-100">
+                <div class="flex items-center justify-between mb-3">
+                  <h3 class="text-xl font-bold text-gray-900">Analytics Tools</h3>
+                  <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Live</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">Interactive analytics and data visualization tools</p>
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <span><i class="fab fa-js text-yellow-500"></i> JavaScript</span>
+                  <span><i class="fas fa-chart-bar text-green-600"></i> Analytics</span>
+                </div>
+              </div>
+              <div class="w-full h-[300px] overflow-hidden">
+                <iframe src="https://rgupta-code.github.io/AnalyticsTools/" class="w-full h-full border-0" title="Analytics Tools"></iframe>
+              </div>
+            </div>
+
+            <!-- Story Builder -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative">
+              <a href="https://rgupta-code.github.io/StoryBuilder/" target="_blank" rel="noopener noreferrer" class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm rounded-lg p-2 shadow-lg hover:bg-white transition-all duration-300 group">
+                <i class="fas fa-external-link-alt text-gray-600 group-hover:text-blue-600 text-sm"></i>
+              </a>
+              <div class="p-6 border-b border-gray-100">
+                <div class="flex items-center justify-between mb-3">
+                  <h3 class="text-xl font-bold text-gray-900">Story Builder</h3>
+                  <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Creative</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">Interactive story creation and narrative building platform</p>
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <span><i class="fab fa-js text-yellow-500"></i> JavaScript</span>
+                  <span><i class="fas fa-pen-fancy text-purple-600"></i> Creative</span>
+                </div>
+              </div>
+              <div class="w-full h-[300px] overflow-hidden">
+                <iframe src="https://rgupta-code.github.io/StoryBuilder/" class="w-full h-full border-0" title="Story Builder"></iframe>
+              </div>
+            </div>
+
+            <!-- HTML Snippets -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative">
+              <a href="https://rgupta-code.github.io/HTMLSnippets/" target="_blank" rel="noopener noreferrer" class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm rounded-lg p-2 shadow-lg hover:bg-white transition-all duration-300 group">
+                <i class="fas fa-external-link-alt text-gray-600 group-hover:text-blue-600 text-sm"></i>
+              </a>
+              <div class="p-6 border-b border-gray-100">
+                <div class="flex items-center justify-between mb-3">
+                  <h3 class="text-xl font-bold text-gray-900">HTML Snippets</h3>
+                  <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">Development</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">Collection of reusable HTML components and code snippets</p>
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <span><i class="fab fa-html5 text-orange-500"></i> HTML5</span>
+                  <span><i class="fas fa-code text-blue-600"></i> Components</span>
+                </div>
+              </div>
+              <div class="w-full h-[300px] overflow-hidden">
+                <iframe src="https://rgupta-code.github.io/HTMLSnippets/" class="w-full h-full border-0" title="HTML Snippets"></iframe>
+              </div>
+            </div>
+
+            <!-- Online Chess -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative">
+              <a href="https://rgupta-code.github.io/TestAppForAI/" target="_blank" rel="noopener noreferrer" class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm rounded-lg p-2 shadow-lg hover:bg-white transition-all duration-300 group">
+                <i class="fas fa-external-link-alt text-gray-600 group-hover:text-blue-600 text-sm"></i>
+              </a>
+              <div class="p-6 border-b border-gray-100">
+                <div class="flex items-center justify-between mb-3">
+                  <h3 class="text-xl font-bold text-gray-900">Online Chess</h3>
+                  <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Game</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">Interactive chess game with AI opponent</p>
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <span><i class="fab fa-js text-yellow-500"></i> JavaScript</span>
+                  <span><i class="fas fa-chess text-green-600"></i> AI Game</span>
+                </div>
+              </div>
+              <div class="w-full h-[3s00px] overflow-hidden">
+                <iframe src="https://rgupta-code.github.io/TestAppForAI/" class="w-full h-full border-0" title="Online Chess"></iframe>
+              </div>
+            </div>
+
+            <!-- Project 1 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <div class="p-6 border-b border-gray-100">
+                <div class="flex items-center justify-between mb-3">
+                  <h3 class="text-xl font-bold text-gray-900">Canvas PowerApp</h3>
+                  <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Live</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">Low-code Canvas application built in PowerApps for FAA operations</p>
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <span><i class="fab fa-microsoft text-blue-600"></i> PowerApps</span>
+                  <span><i class="fas fa-database text-green-600"></i> SQL Server</span>
+                </div>
+              </div>
+              <div class="h-80 bg-gray-100 flex items-center justify-center">
+                <div class="text-center space-y-3">
+                  <i class="fas fa-external-link-alt text-3xl text-gray-400"></i>
+                  <p class="text-gray-500 text-sm">Demo not available</p>
+                  <p class="text-xs text-gray-400">Internal FAA system</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <div class="p-6 border-b border-gray-100">
+                <div class="flex items-center justify-between mb-3">
+                  <h3 class="text-xl font-bold text-gray-900">eBillingHub</h3>
+                  <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Enterprise</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">Invoice processing system handling 4M+ invoices annually</p>
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <span><i class="fab fa-angular text-red-600"></i> Angular</span>
+                  <span><i class="fas fa-code text-blue-600"></i> .NET</span>
+                </div>
+              </div>
+              <div class="h-80 bg-gray-100 flex items-center justify-center">
+                <div class="text-center space-y-3">
+                  <i class="fas fa-lock text-3xl text-gray-400"></i>
+                  <p class="text-gray-500 text-sm">Private System</p>
+                  <p class="text-xs text-gray-400">Thomson Reuters internal</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <div class="p-6 border-b border-gray-100">
+                <div class="flex items-center justify-between mb-3">
+                  <h3 class="text-xl font-bold text-gray-900">CardioBilling System</h3>
+                  <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Healthcare</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">Cardiology billing system adopted by 20+ hospitals</p>
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <span><i class="fab fa-angular text-red-600"></i> AngularJS</span>
+                  <span><i class="fas fa-chart-bar text-green-600"></i> SSRS</span>
+                </div>
+              </div>
+              <div class="h-80 bg-gray-100 flex items-center justify-center">
+                <div class="text-center space-y-3">
+                  <i class="fas fa-hospital text-3xl text-gray-400"></i>
+                  <p class="text-gray-500 text-sm">Healthcare System</p>
+                  <p class="text-xs text-gray-400">Boston Children's Hospital</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <div class="p-6 border-b border-gray-100">
+                <div class="flex items-center justify-between mb-3">
+                  <h3 class="text-xl font-bold text-gray-900">Chat Application</h3>
+                  <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">AI-Powered</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">AI chat app using Llama 2 & RAG architecture</p>
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <span><i class="fas fa-robot text-purple-600"></i> Llama 2</span>
+                  <span><i class="fas fa-brain text-blue-600"></i> RAG</span>
+                </div>
+              </div>
+              <div class="h-80 bg-gray-100 flex items-center justify-center">
+                <div class="text-center space-y-3">
+                  <i class="fas fa-comments text-3xl text-gray-400"></i>
+                  <p class="text-gray-500 text-sm">AI Chat Demo</p>
+                  <p class="text-xs text-gray-400">FAA Internal Tool</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <div class="p-6 border-b border-gray-100">
+                <div class="flex items-center justify-between mb-3">
+                  <h3 class="text-xl font-bold text-gray-900">IVR Health Talker</h3>
+                  <span class="bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded-full">Voice</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">Interactive Voice Response system for healthcare</p>
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <span><i class="fas fa-phone text-green-600"></i> VXML</span>
+                  <span><i class="fas fa-code text-blue-600"></i> .NET</span>
+                </div>
+              </div>
+              <div class="h-80 bg-gray-100 flex items-center justify-center">
+                <div class="text-center space-y-3">
+                  <i class="fas fa-phone-alt text-3xl text-gray-400"></i>
+                  <p class="text-gray-500 text-sm">Voice System</p>
+                  <p class="text-xs text-gray-400">200K+ calls monthly</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <div class="p-6 border-b border-gray-100">
+                <div class="flex items-center justify-between mb-3">
+                  <h3 class="text-xl font-bold text-gray-900">ArcGIS Integration</h3>
+                  <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">Mapping</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">Geospatial mapping integration in Angular applications</p>
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <span><i class="fas fa-map text-blue-600"></i> ArcGIS</span>
+                  <span><i class="fab fa-angular text-red-600"></i> Angular</span>
+                </div>
+              </div>
+              <div class="h-80 bg-gray-100 flex items-center justify-center">
+                <div class="text-center space-y-3">
+                  <i class="fas fa-map-marked-alt text-3xl text-gray-400"></i>
+                  <p class="text-gray-500 text-sm">Mapping System</p>
+                  <p class="text-xs text-gray-400">FAA Operations</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Tab -->
+      <div id="contact" class="tab-content hidden">
+        <div class="max-w-2xl mx-auto space-y-8">
+          <div class="text-center space-y-4">
+            <h2 class="text-3xl font-bold text-gray-900">Get In Touch</h2>
+            <p class="text-gray-600">Let's connect and discuss opportunities for collaboration</p>
+          </div>
+          
+          <div class="bg-white rounded-2xl p-8 shadow-lg space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <h3 class="text-xl font-bold text-gray-900">Contact Information</h3>
+                <div class="space-y-3">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center">
+                      <i class="fas fa-envelope text-slate-600"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm text-gray-500">Email</p>
+                      <p class="font-medium text-gray-900">Available upon request</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                      <i class="fab fa-linkedin text-blue-600"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm text-gray-500">LinkedIn</p>
+                      <p class="font-medium text-gray-900">linkedin.com/in/rashi-gupta-sw</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                      <i class="fas fa-map-marker-alt text-green-600"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm text-gray-500">Location</p>
+                      <p class="font-medium text-gray-900">Boston, MA</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <h3 class="text-xl font-bold text-gray-900">Education</h3>
+                <div class="space-y-3">
+                  <div class="p-3 bg-gray-50 rounded-lg">
+                    <p class="font-medium text-gray-900">MS in Textile Engineering</p>
+                    <p class="text-sm text-gray-600">IIT Delhi, India</p>
+                  </div>
+                  <div class="p-3 bg-gray-50 rounded-lg">
+                    <p class="font-medium text-gray-900">BS in Textile Technology</p>
+                    <p class="text-sm text-gray-600">UP Technical University, India</p>
+                  </div>
+                  <div class="p-3 bg-gray-50 rounded-lg">
+                    <p class="font-medium text-gray-900">Oracle Certified Associate</p>
+                    <p class="text-sm text-gray-600">Oracle University</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <!-- Skill Modal -->
     <div id="skillModal" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden flex items-center justify-center z-50">
-      <div class="bg-white rounded-2xl shadow-lg p-6 max-w-lg w-full animate-bounceIn">
-        <div class="flex justify-between items-center mb-3">
-          <h3 class="text-lg font-bold text-deepPurple">All Skills</h3>
-          <button onclick="closeSkillModal()" class="text-xl font-bold text-gray-500 hover:text-black">&times;</button>
+      <div class="bg-white rounded-2xl shadow-lg p-6 max-w-2xl w-full mx-4 animate-bounceIn">
+        <div class="flex justify-between items-center mb-6">
+          <h3 class="text-2xl font-bold text-gray-900">Complete Skill Set</h3>
+          <button onclick="closeSkillModal()" class="text-2xl font-bold text-gray-500 hover:text-black transition-colors">&times;</button>
         </div>
-        <div class="text-sm text-gray-700 grid grid-cols-2 gap-2 max-h-96 overflow-y-auto">
-          <span>JavaScript</span><span>React</span><span>Angular</span><span>Node.js</span><span>.NET Core</span>
-          <span>C#</span><span>SQL Server</span><span>Azure</span><span>AWS</span><span>Power Platform</span>
-          <span>PL/SQL</span><span>Flutter</span><span>XAML</span><span>EF Core</span><span>SSRS/SSIS</span>
-          <span>Postman</span><span>DocuSign</span><span>ArcGIS</span><span>Dialogflow</span><span>Llama2</span>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-h-96 overflow-y-auto">
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50">
+            <i class="fab fa-js text-yellow-500"></i>
+            <span class="text-sm">JavaScript</span>
+          </div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50">
+            <i class="fab fa-react text-blue-500"></i>
+            <span class="text-sm">React</span>
+          </div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50">
+            <i class="fab fa-angular text-red-500"></i>
+            <span class="text-sm">Angular</span>
+          </div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50">
+            <i class="fab fa-node-js text-green-500"></i>
+            <span class="text-sm">Node.js</span>
+          </div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50">
+            <i class="fas fa-code text-blue-600"></i>
+            <span class="text-sm">.NET Core</span>
+          </div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50">
+            <i class="fas fa-hashtag text-purple-600"></i>
+            <span class="text-sm">C#</span>
+          </div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50">
+            <i class="fas fa-database text-orange-500"></i>
+            <span class="text-sm">SQL Server</span>
+          </div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50">
+            <i class="fab fa-aws text-orange-600"></i>
+            <span class="text-sm">AWS</span>
+          </div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50">
+            <i class="fab fa-microsoft text-blue-600"></i>
+            <span class="text-sm">Azure</span>
+          </div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50">
+            <i class="fas fa-robot text-purple-600"></i>
+            <span class="text-sm">Power Platform</span>
+          </div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50">
+            <i class="fas fa-chart-line text-blue-600"></i>
+            <span class="text-sm">Tableau</span>
+          </div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50">
+            <i class="fas fa-database text-green-600"></i>
+            <span class="text-sm">PL/SQL</span>
+          </div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50">
+            <i class="fab fa-flutter text-blue-500"></i>
+            <span class="text-sm">Flutter</span>
+          </div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50">
+            <i class="fas fa-code text-purple-600"></i>
+            <span class="text-sm">XAML</span>
+          </div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50">
+            <i class="fas fa-database text-blue-600"></i>
+            <span class="text-sm">EF Core</span>
+          </div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50">
+            <i class="fas fa-chart-bar text-green-600"></i>
+            <span class="text-sm">SSRS/SSIS</span>
+          </div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50">
+            <i class="fas fa-paper-plane text-orange-600"></i>
+            <span class="text-sm">Postman</span>
+          </div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50">
+            <i class="fas fa-file-signature text-blue-600"></i>
+            <span class="text-sm">DocuSign</span>
+          </div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50">
+            <i class="fas fa-map text-green-600"></i>
+            <span class="text-sm">ArcGIS</span>
+          </div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50">
+            <i class="fas fa-comments text-purple-600"></i>
+            <span class="text-sm">Dialogflow</span>
+          </div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50">
+            <i class="fas fa-brain text-orange-600"></i>
+            <span class="text-sm">Llama2</span>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Experience Modal -->
     <div id="experienceModal" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden flex items-center justify-center z-50">
-      <div class="bg-white rounded-2xl shadow-lg p-6 max-w-xl w-full animate-bounceIn">
-        <div class="flex justify-between items-center mb-3">
-          <h3 class="text-lg font-bold text-deepPurple" id="expTitle">Experience</h3>
-          <button onclick="closeExperienceModal()" class="text-xl font-bold text-gray-500 hover:text-black">&times;</button>
+      <div class="bg-white rounded-2xl shadow-lg p-6 max-w-2xl w-full mx-4 animate-bounceIn">
+        <div class="flex justify-between items-center mb-6">
+          <h3 class="text-2xl font-bold text-gray-900" id="expTitle">Experience</h3>
+          <button onclick="closeExperienceModal()" class="text-2xl font-bold text-gray-500 hover:text-black transition-colors">&times;</button>
         </div>
-        <ul id="expDetails" class="list-disc ml-5 text-sm text-gray-700 space-y-1"></ul>
+        <ul id="expDetails" class="space-y-3 text-gray-700"></ul>
       </div>
     </div>
 
     <script>
+      // Tab switching functionality
+      function switchTab(tabName) {
+        // Hide all tab contents
+        const tabContents = document.querySelectorAll('.tab-content');
+        tabContents.forEach(content => {
+          content.classList.add('hidden');
+          content.classList.remove('animate-fadeIn');
+        });
+
+        // Remove active class from all tab buttons
+        const tabBtns = document.querySelectorAll('.tab-btn, .mobile-tab-btn');
+        tabBtns.forEach(btn => btn.classList.remove('active', 'bg-slate-100', 'text-slate-700'));
+
+        // Show selected tab content
+        const selectedTab = document.getElementById(tabName);
+        selectedTab.classList.remove('hidden');
+        selectedTab.classList.add('animate-fadeIn');
+
+        // Add active class to selected tab button
+        const activeBtn = document.querySelector(`[onclick="switchTab('${tabName}')"]`);
+        if (activeBtn) {
+          activeBtn.classList.add('active', 'bg-slate-100', 'text-slate-700');
+        }
+
+        // Close mobile menu if open
+        document.getElementById('mobileMenu').classList.add('hidden');
+      }
+
+      // Mobile menu toggle
+      function toggleMobileMenu() {
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenu.classList.toggle('hidden');
+      }
+
+      // Modal functionality
       function openSkillModal() {
         document.getElementById('skillModal').classList.remove('hidden');
       }
+
       function closeSkillModal() {
         document.getElementById('skillModal').classList.add('hidden');
       }
 
       const experienceData = {
         kbr: {
-          title: 'KBR / FAA',
+          title: 'KBR / FAA - Principal Software Engineer',
           bullets: [
-            'Built low-code Canvas app in PowerApps.',
-            'Led .NET 8 upgrade, completed 2 weeks early.',
-            'Integrated ArcGIS Maps and DocuSign in Angular apps.',
-            'Improved page load from 2 min to 2 sec using hashmap.',
-            'Cut API testing time 10x using Postman.',
-            'Converted stored procedures to LINQ using EF Core.',
-            'Resolved critical bugs before release deadlines.',
-            'Delivered 4-month feature in 4 weeks with OOP principles.',
-            'Created chat app using Llama 2 & RAG architecture.',
-            'Mentored new hires and juniors.'
+            'Built low-code Canvas app in PowerApps for FAA operations',
+            'Led .NET 8 upgrade, completed 2 weeks early with zero downtime',
+            'Integrated ArcGIS Maps and DocuSign in Angular applications',
+            'Improved page load performance from 2 minutes to 2 seconds using hashmap optimization',
+            'Cut API testing time by 10x using Postman automation',
+            'Converted stored procedures to LINQ using Entity Framework Core',
+            'Resolved critical bugs before release deadlines',
+            'Delivered 4-month feature in 4 weeks using OOP principles',
+            'Created AI-powered chat application using Llama 2 & RAG architecture',
+            'Mentored new hires and junior developers'
           ]
         },
         tr: {
-          title: 'Thomson Reuters',
+          title: 'Thomson Reuters - Senior Software Engineer',
           bullets: [
-            'Developed eBillingHub, processed 4M invoices annually.',
-            'Mastered legacy tech quickly to meet urgent deadlines.',
-            'Maintained 100% unit test coverage.',
-            'Advanced Azure PaaS expertise to finish ahead of schedule.'
+            'Developed eBillingHub system, processing 4M+ invoices annually',
+            'Mastered legacy technologies quickly to meet urgent project deadlines',
+            'Maintained 100% unit test coverage across all modules',
+            'Advanced Azure PaaS expertise to finish projects ahead of schedule'
           ]
         },
         bch: {
-          title: "Boston Children's Hospital",
+          title: "Boston Children's Hospital - App Dev Specialist III",
           bullets: [
-            'Led CardioBilling & C3PO-QI system adoption by 20 hospitals.',
-            'Built SSRS/Tableau dashboards, automated ETL workflows.',
-            'Created Cath Billing tracker with AngularJS/Web API.',
-            'Reduced data collection by 50% with auto-import features.'
+            'Led CardioBilling & C3PO-QI system adoption by 20+ hospitals nationwide',
+            'Built comprehensive SSRS/Tableau dashboards and automated ETL workflows',
+            'Created Cath Billing tracker with AngularJS/Web API integration',
+            'Reduced manual data collection by 50% with auto-import features'
           ]
         },
         mgh: {
-          title: 'Massachusetts General Hospital',
+          title: 'Massachusetts General Hospital - Info Support Coordinator',
           bullets: [
-            'Developed IVR Health Talker using VXML/.NET.',
-            'Migrated systems to Azure, made 200K+ calls in a month.'
+            'Developed IVR Health Talker using VXML/.NET for patient communication',
+            'Successfully migrated systems to Azure cloud platform',
+            'Handled 200K+ automated calls in a single month'
           ]
         }
       };
@@ -188,13 +880,34 @@
         const data = experienceData[company];
         document.getElementById('expTitle').textContent = data.title;
         const list = document.getElementById('expDetails');
-        list.innerHTML = data.bullets.map(item => `<li>${item}</li>`).join('');
+        list.innerHTML = data.bullets.map(item => `<li class="flex items-start space-x-3"><i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0"></i><span>${item}</span></li>`).join('');
         document.getElementById('experienceModal').classList.remove('hidden');
       }
 
       function closeExperienceModal() {
         document.getElementById('experienceModal').classList.add('hidden');
       }
+
+      // Close modals when clicking outside
+      document.addEventListener('click', function(event) {
+        const skillModal = document.getElementById('skillModal');
+        const experienceModal = document.getElementById('experienceModal');
+        
+        if (event.target === skillModal) {
+          closeSkillModal();
+        }
+        if (event.target === experienceModal) {
+          closeExperienceModal();
+        }
+      });
+
+      // Initialize first tab as active
+      document.addEventListener('DOMContentLoaded', function() {
+        const firstTabBtn = document.querySelector('.tab-btn');
+        if (firstTabBtn) {
+          firstTabBtn.classList.add('active', 'bg-slate-100', 'text-slate-700');
+        }
+      });
     </script>
   </body>
 </html>
