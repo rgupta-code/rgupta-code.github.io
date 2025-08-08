@@ -51,6 +51,29 @@
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      .nav-link.active,
+      .mobile-nav-link.active {
+        background-color: rgb(241 245 249);
+        color: rgb(51 65 85);
+      }
+      
+      section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        display: block;
+      }
+      
+      section.hidden {
+        display: none;
+      }
+      
+      section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
   </head>
 
   <body class="bg-gradient-to-br from-gray-50 via-slate-100 to-blue-50 font-sans text-gray-800 min-h-screen">
@@ -68,11 +91,12 @@
             </div>
           </div>
           <div class="hidden md:flex items-center space-x-8">
-            <button onclick="switchTab('about')" class="tab-btn active text-sm font-medium transition-colors">About</button>
-            <button onclick="switchTab('experience')" class="tab-btn text-sm font-medium transition-colors">Experience</button>
-            <button onclick="switchTab('skills')" class="tab-btn text-sm font-medium transition-colors">Skills</button>
-            <button onclick="switchTab('showcase')" class="tab-btn text-sm font-medium transition-colors">Web Systems</button>
-            <button onclick="switchTab('contact')" class="tab-btn text-sm font-medium transition-colors">Contact</button>
+            <a href="#about" class="nav-link active text-sm font-medium transition-colors hover:text-slate-700">About</a>
+            <a href="#competencies" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Competencies</a>
+            <a href="#experience" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Experience</a>
+            <a href="#skills" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Skills</a>
+            <a href="#showcase" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Web Systems</a>
+            <a href="#contact" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Contact</a>
           </div>
           <button class="md:hidden" onclick="toggleMobileMenu()">
             <i class="fas fa-bars text-gray-600"></i>
@@ -82,21 +106,22 @@
     </nav>
 
     <!-- Mobile Menu -->
-    <div id="mobileMenu" class="md:hidden hidden bg-white border-b border-gray-200">
-      <div class="px-6 py-4 space-y-3">
-        <button onclick="switchTab('about')" class="mobile-tab-btn active w-full text-left py-2 px-3 rounded-lg transition-colors">About</button>
-        <button onclick="switchTab('experience')" class="mobile-tab-btn w-full text-left py-2 px-3 rounded-lg transition-colors">Experience</button>
-        <button onclick="switchTab('skills')" class="mobile-tab-btn w-full text-left py-2 px-3 rounded-lg transition-colors">Skills</button>
-        <button onclick="switchTab('showcase')" class="mobile-tab-btn w-full text-left py-2 px-3 rounded-lg transition-colors">Web Systems</button>
-        <button onclick="switchTab('contact')" class="mobile-tab-btn w-full text-left py-2 px-3 rounded-lg transition-colors">Contact</button>
+          <div id="mobileMenu" class="md:hidden hidden bg-white border-b border-gray-200">
+        <div class="px-6 py-4 space-y-3">
+          <a href="#about" class="mobile-nav-link active w-full text-left py-2 px-3 rounded-lg transition-colors block">About</a>
+          <a href="#competencies" class="mobile-nav-link w-full text-left py-2 px-3 rounded-lg transition-colors block">Competencies</a>
+          <a href="#experience" class="mobile-nav-link w-full text-left py-2 px-3 rounded-lg transition-colors block">Experience</a>
+          <a href="#skills" class="mobile-nav-link w-full text-left py-2 px-3 rounded-lg transition-colors block">Skills</a>
+          <a href="#showcase" class="mobile-nav-link w-full text-left py-2 px-3 rounded-lg transition-colors block">Web Systems</a>
+          <a href="#contact" class="mobile-nav-link w-full text-left py-2 px-3 rounded-lg transition-colors block">Contact</a>
+        </div>
       </div>
-    </div>
 
     <!-- Main Content -->
-    <main class="max-w-6xl mx-auto px-6 py-8">
+    <main class="max-w-6xl mx-auto px-6">
       
-      <!-- About Tab -->
-      <div id="about" class="tab-content active animate-fadeIn">
+      <!-- About Section -->
+      <section id="about" class="py-20 scroll-mt-20">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div class="space-y-6">
             <div class="space-y-4">
@@ -123,12 +148,12 @@
             </div>
 
             <div class="flex space-x-4">
-              <button onclick="switchTab('experience')" class="bg-gradient-to-r from-slate-700 to-blue-700 text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                View Experience
-              </button>
-              <button onclick="switchTab('showcase')" class="border-2 border-slate-700 text-slate-700 px-6 py-3 rounded-xl font-medium hover:bg-slate-700 hover:text-white transition-all duration-300">
-                View Projects
-              </button>
+              <a href="#experience" class="bg-gradient-to-r from-slate-700 to-blue-700 text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105 inline-block">
+                Experience
+              </a>
+              <a href="#showcase" class="border-2 border-slate-700 text-slate-700 px-6 py-3 rounded-xl font-medium hover:bg-slate-700 hover:text-white transition-all duration-300 inline-block">
+                Projects
+              </a>
             </div>
 
             <!-- Skills Glimpse -->
@@ -160,9 +185,9 @@
                   </div>
                 </div>
               </div>
-              <button onclick="switchTab('skills')" class="mt-4 text-slate-700 text-sm font-medium hover:text-slate-800 transition-colors">
+              <a href="#skills" class="mt-4 text-slate-700 text-sm font-medium hover:text-slate-800 transition-colors inline-block">
                 View all skills <i class="fas fa-arrow-right ml-1"></i>
-              </button>
+              </a>
             </div>
           </div>
           
@@ -181,53 +206,143 @@
                 <ul class="space-y-3 text-sm">
                   <li class="flex items-start space-x-3">
                     <i class="fas fa-check-circle mt-1 text-white"></i>
-                    <span>Led .NET 8 upgrade completed 2 weeks early</span>
+                    <span>Completed 100% of tasks on or before deadline with zero missed milestones</span>
                   </li>
                   <li class="flex items-start space-x-3">
                     <i class="fas fa-check-circle mt-1 text-white"></i>
-                    <span>Improved page load from 2 min to 2 sec</span>
+                    <span>Improved page load time from 2 minutes to 2 seconds using optimized hashmap</span>
                   </li>
                   <li class="flex items-start space-x-3">
                     <i class="fas fa-check-circle mt-1 text-white"></i>
-                    <span>Cut API testing time 10x using Postman</span>
+                    <span>Cut API testing time 10x by leading Postman adoption</span>
                   </li>
                   <li class="flex items-start space-x-3">
                     <i class="fas fa-check-circle mt-1 text-white"></i>
-                    <span>Delivered 4-month feature in 4 weeks</span>
+                    <span>Delivered 4-month feature in 4 weeks using OOP best practices</span>
                   </li>
                   <li class="flex items-start space-x-3">
                     <i class="fas fa-check-circle mt-1 text-white"></i>
-                    <span>Built eBillingHub processing 4M+ invoices annually</span>
+                    <span>Led Healthcare system adopted by 20+ hospitals across the U.S.</span>
                   </li>
                   <li class="flex items-start space-x-3">
                     <i class="fas fa-check-circle mt-1 text-white"></i>
-                    <span>Led CardioBilling adoption by 20+ hospitals</span>
+                    <span>Maintained 100% unit test coverage for high-reliability deployments</span>
                   </li>
                   <li class="flex items-start space-x-3">
                     <i class="fas fa-check-circle mt-1 text-white"></i>
-                    <span>Created AI chat app using Llama 2 & RAG</span>
+                    <span>Reduced data collection time by 50% through automation and subscriptions</span>
                   </li>
                   <li class="flex items-start space-x-3">
                     <i class="fas fa-check-circle mt-1 text-white"></i>
-                    <span>Maintained 100% unit test coverage</span>
+                    <span>Automated SonarQube issue notifications, improving code hygiene</span>
                   </li>
                   <li class="flex items-start space-x-3">
                     <i class="fas fa-check-circle mt-1 text-white"></i>
-                    <span>Reduced data collection time by 50% with automation</span>
+                    <span>Led mentorship and onboarding of junior developers, accelerating team productivity</span>
                   </li>
                   <li class="flex items-start space-x-3">
                     <i class="fas fa-check-circle mt-1 text-white"></i>
-                    <span>Handled 200K+ automated calls monthly</span>
+                    <span>Replaced dropdowns with ArcGIS maps, improving UX and interaction flow</span>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- Experience Tab -->
-      <div id="experience" class="tab-content hidden">
+      <!-- Core Competencies Section -->
+      <section id="competencies" class="py-20 scroll-mt-20">
+        <div class="space-y-8">
+          <div class="text-center space-y-4">
+            <h2 class="text-3xl font-bold text-gray-900">Core Competencies</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Key strengths that drive consistent success across diverse technical challenges</p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Reliability & Accountability -->
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-green-500">
+              <div class="flex items-center space-x-3 mb-4">
+                <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
+                  <i class="fas fa-check-circle text-green-600 text-xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900">Reliability & Accountability</h3>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Proven track record of delivering high-quality work on or ahead of schedule, with zero missed deadlines or regressions.
+              </p>
+            </div>
+
+            <!-- Problem Solving & Critical Thinking -->
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-blue-500">
+              <div class="flex items-center space-x-3 mb-4">
+                <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                  <i class="fas fa-lightbulb text-blue-600 text-xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900">Problem Solving & Critical Thinking</h3>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Consistently optimized performance (e.g., reduced page load time from 2 mins to 2 secs) and handled last-minute bugs without compromising release timelines.
+              </p>
+            </div>
+
+            <!-- Leadership & Mentorship -->
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-purple-500">
+              <div class="flex items-center space-x-3 mb-4">
+                <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
+                  <i class="fas fa-users text-purple-600 text-xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900">Leadership & Mentorship</h3>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Guided junior developers and new hires, accelerating their ramp-up and contributing to team growth and cohesion.
+              </p>
+            </div>
+
+            <!-- Adaptability & Learning Agility -->
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-orange-500">
+              <div class="flex items-center space-x-3 mb-4">
+                <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
+                  <i class="fas fa-sync-alt text-orange-600 text-xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900">Adaptability & Learning Agility</h3>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Quickly learned new technologies (e.g., ActiveX, LLMs, DocuSign, EF Core), and delivered solutions even in legacy systems or unfamiliar environments.
+              </p>
+            </div>
+
+            <!-- Collaboration & Communication -->
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-indigo-500">
+              <div class="flex items-center space-x-3 mb-4">
+                <div class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center">
+                  <i class="fas fa-comments text-indigo-600 text-xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900">Collaboration & Communication</h3>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Worked cross-functionally on critical upgrades (.NET 8, Angular 19), coordinated with multiple teams, and ensured minimal disruption to parallel workflows.
+              </p>
+            </div>
+
+            <!-- Initiative & Innovation -->
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-teal-500">
+              <div class="flex items-center space-x-3 mb-4">
+                <div class="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center">
+                  <i class="fas fa-rocket text-teal-600 text-xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900">Initiative & Innovation</h3>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Spearheaded new projects (e.g., LLM-based chat app, PowerApps automation, API testing with Postman), introducing tools and processes that improved productivity and reduced manual effort.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="py-20 scroll-mt-20">
         <div class="space-y-8">
           <div class="text-center space-y-4">
             <h2 class="text-3xl font-bold text-gray-900">Professional Experience</h2>
@@ -288,10 +403,10 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- Skills Tab -->
-      <div id="skills" class="tab-content hidden">
+      <!-- Skills Section -->
+      <section id="skills" class="py-20 scroll-mt-20">
         <div class="space-y-8">
           <div class="text-center space-y-4">
             <h2 class="text-3xl font-bold text-gray-900">Technical Skills</h2>
@@ -386,10 +501,10 @@
             View All Skills
           </button>
         </div>
-      </div>
+      </section>
 
-      <!-- Web Systems Showcase Tab -->
-      <div id="showcase" class="tab-content hidden">
+      <!-- Web Systems Showcase Section -->
+      <section id="showcase" class="py-20 scroll-mt-20">
         <div class="space-y-8">
           <div class="text-center space-y-4">
             <h2 class="text-3xl font-bold text-gray-900">Web Systems Showcase</h2>
@@ -524,6 +639,70 @@
               </div>
             </div>
 
+            <!-- Kid Social -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative">
+              <a href="https://rgupta-code.github.io/KidSocial/" target="_blank" rel="noopener noreferrer" class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm rounded-lg p-2 shadow-lg hover:bg-white transition-all duration-300 group">
+                <i class="fas fa-external-link-alt text-gray-600 group-hover:text-blue-600 text-sm"></i>
+              </a>
+              <div class="p-6 border-b border-gray-100">
+                <div class="flex items-center justify-between mb-3">
+                  <h3 class="text-xl font-bold text-gray-900">Kid Social</h3>
+                  <span class="bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full">Social</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">Social platform designed for children</p>
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <span><i class="fab fa-js text-yellow-500"></i> JavaScript</span>
+                  <span><i class="fas fa-users text-pink-600"></i> Social</span>
+                </div>
+              </div>
+              <div class="w-full h-[300px] overflow-hidden">
+                <iframe src="https://rgupta-code.github.io/KidSocial/" class="w-full h-full border-0" title="Kid Social" style="transform: scale(0.3); transform-origin: top left; width: 333.33%; height: 333.33%;"></iframe>
+              </div>
+            </div>
+
+            <!-- Hangman App -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative">
+              <a href="https://rgupta-code.github.io/HangmanApp/" target="_blank" rel="noopener noreferrer" class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm rounded-lg p-2 shadow-lg hover:bg-white transition-all duration-300 group">
+                <i class="fas fa-external-link-alt text-gray-600 group-hover:text-blue-600 text-sm"></i>
+              </a>
+              <div class="p-6 border-b border-gray-100">
+                <div class="flex items-center justify-between mb-3">
+                  <h3 class="text-xl font-bold text-gray-900">Hangman App</h3>
+                  <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Game</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">Classic hangman word guessing game</p>
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <span><i class="fab fa-js text-yellow-500"></i> JavaScript</span>
+                  <span><i class="fas fa-gamepad text-red-600"></i> Word Game</span>
+                </div>
+              </div>
+              <div class="w-full h-[300px] overflow-hidden">
+                <iframe src="https://rgupta-code.github.io/HangmanApp/" class="w-full h-full border-0" title="Hangman App" style="transform: scale(0.3); transform-origin: top left; width: 333.33%; height: 333.33%;"></iframe>
+              </div>
+            </div>
+
+            <!-- Shopping App for Kids -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative">
+              <a href="https://rgupta-code.github.io/ShoppingAppForKid/" target="_blank" rel="noopener noreferrer" class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm rounded-lg p-2 shadow-lg hover:bg-white transition-all duration-300 group">
+                <i class="fas fa-external-link-alt text-gray-600 group-hover:text-blue-600 text-sm"></i>
+              </a>
+              <div class="p-6 border-b border-gray-100">
+                <div class="flex items-center justify-between mb-3">
+                  <h3 class="text-xl font-bold text-gray-900">Shopping App for Kids</h3>
+                  <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">E-commerce</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">Child-friendly shopping experience</p>
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <span><i class="fab fa-js text-yellow-500"></i> JavaScript</span>
+                  <span><i class="fas fa-shopping-cart text-green-600"></i> Shopping</span>
+                </div>
+              </div>
+              <div class="w-full h-[300px] overflow-hidden">
+                <iframe src="https://rgupta-code.github.io/ShoppingAppForKid/" class="w-full h-full border-0" title="Shopping App for Kids" style="transform: scale(0.3); transform-origin: top left; width: 333.33%; height: 333.33%;"></iframe>
+              </div>
+            </div>
+
+
             <!-- Project 1 -->
             <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
               <div class="p-6 border-b border-gray-100">
@@ -537,7 +716,7 @@
                   <span><i class="fas fa-database text-green-600"></i> SQL Server</span>
                 </div>
               </div>
-              <div class="h-80 bg-gray-100 flex items-center justify-center">
+              <div class="h-[30%] bg-gray-100 flex items-center justify-center">
                 <div class="text-center space-y-3">
                   <i class="fas fa-external-link-alt text-3xl text-gray-400"></i>
                   <p class="text-gray-500 text-sm">Demo not available</p>
@@ -559,7 +738,7 @@
                   <span><i class="fas fa-code text-blue-600"></i> .NET</span>
                 </div>
               </div>
-              <div class="h-80 bg-gray-100 flex items-center justify-center">
+              <div class="h-[30%] bg-gray-100 flex items-center justify-center">
                 <div class="text-center space-y-3">
                   <i class="fas fa-lock text-3xl text-gray-400"></i>
                   <p class="text-gray-500 text-sm">Private System</p>
@@ -581,7 +760,7 @@
                   <span><i class="fas fa-chart-bar text-green-600"></i> SSRS</span>
                 </div>
               </div>
-              <div class="h-80 bg-gray-100 flex items-center justify-center">
+              <div class="h-[30%] bg-gray-100 flex items-center justify-center">
                 <div class="text-center space-y-3">
                   <i class="fas fa-hospital text-3xl text-gray-400"></i>
                   <p class="text-gray-500 text-sm">Healthcare System</p>
@@ -603,7 +782,7 @@
                   <span><i class="fas fa-brain text-blue-600"></i> RAG</span>
                 </div>
               </div>
-              <div class="h-80 bg-gray-100 flex items-center justify-center">
+              <div class="h-[30%] bg-gray-100 flex items-center justify-center">
                 <div class="text-center space-y-3">
                   <i class="fas fa-comments text-3xl text-gray-400"></i>
                   <p class="text-gray-500 text-sm">AI Chat Demo</p>
@@ -625,7 +804,7 @@
                   <span><i class="fas fa-code text-blue-600"></i> .NET</span>
                 </div>
               </div>
-              <div class="h-80 bg-gray-100 flex items-center justify-center">
+              <div class="h-[30%] bg-gray-100 flex items-center justify-center">
                 <div class="text-center space-y-3">
                   <i class="fas fa-phone-alt text-3xl text-gray-400"></i>
                   <p class="text-gray-500 text-sm">Voice System</p>
@@ -647,7 +826,7 @@
                   <span><i class="fab fa-angular text-red-600"></i> Angular</span>
                 </div>
               </div>
-              <div class="h-80 bg-gray-100 flex items-center justify-center">
+              <div class="h-[30%] bg-gray-100 flex items-center justify-center">
                 <div class="text-center space-y-3">
                   <i class="fas fa-map-marked-alt text-3xl text-gray-400"></i>
                   <p class="text-gray-500 text-sm">Mapping System</p>
@@ -658,10 +837,10 @@
 
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- Contact Tab -->
-      <div id="contact" class="tab-content hidden">
+      <!-- Contact Section -->
+      <section id="contact" class="py-20 scroll-mt-20">
         <div class="max-w-2xl mx-auto space-y-8">
           <div class="text-center space-y-4">
             <h2 class="text-3xl font-bold text-gray-900">Get In Touch</h2>
@@ -723,7 +902,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
 
     <!-- Skill Modal -->
@@ -946,32 +1125,32 @@
     </div>
 
     <script>
-      // Tab switching functionality
-      function switchTab(tabName) {
-        // Hide all tab contents
-        const tabContents = document.querySelectorAll('.tab-content');
-        tabContents.forEach(content => {
-          content.classList.add('hidden');
-          content.classList.remove('animate-fadeIn');
+      // Section switching functionality (like original tabs)
+      function switchSection(sectionId) {
+        // Hide all sections
+        const sections = document.querySelectorAll('section[id]');
+        sections.forEach(section => {
+          section.classList.add('hidden');
+          section.classList.remove('visible');
         });
-
-        // Remove active class from all tab buttons
-        const tabBtns = document.querySelectorAll('.tab-btn, .mobile-tab-btn');
-        tabBtns.forEach(btn => btn.classList.remove('active', 'bg-slate-100', 'text-slate-700'));
-
-        // Show selected tab content
-        const selectedTab = document.getElementById(tabName);
-        selectedTab.classList.remove('hidden');
-        selectedTab.classList.add('animate-fadeIn');
-
-        // Add active class to selected tab button
-        const activeBtn = document.querySelector(`[onclick="switchTab('${tabName}')"]`);
-        if (activeBtn) {
-          activeBtn.classList.add('active', 'bg-slate-100', 'text-slate-700');
+        
+        // Show the selected section
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+          targetSection.classList.remove('hidden');
+          targetSection.classList.add('visible');
         }
-
-        // Close mobile menu if open
-        document.getElementById('mobileMenu').classList.add('hidden');
+        
+        // Update navigation highlighting
+        const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+        navLinks.forEach(link => {
+          link.classList.remove('active', 'bg-slate-100', 'text-slate-700');
+        });
+        
+        const activeLink = document.querySelector(`[href="#${sectionId}"]`);
+        if (activeLink) {
+          activeLink.classList.add('active', 'bg-slate-100', 'text-slate-700');
+        }
       }
 
       // Mobile menu toggle
@@ -1058,11 +1237,25 @@
         }
       });
 
-      // Initialize first tab as active
+      // Section switching for navigation links
       document.addEventListener('DOMContentLoaded', function() {
-        const firstTabBtn = document.querySelector('.tab-btn');
-        if (firstTabBtn) {
-          firstTabBtn.classList.add('active', 'bg-slate-100', 'text-slate-700');
+        // Handle navigation link clicks
+        const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+        navLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            switchSection(targetId);
+            
+            // Close mobile menu if open
+            document.getElementById('mobileMenu').classList.add('hidden');
+          });
+        });
+
+        // Show first section by default
+        const firstSection = document.querySelector('section[id]');
+        if (firstSection) {
+          switchSection(firstSection.id);
         }
       });
     </script>
