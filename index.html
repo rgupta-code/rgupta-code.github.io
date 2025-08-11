@@ -148,12 +148,12 @@
             </div>
 
             <div class="flex space-x-4">
-              <a href="#experience" class="bg-gradient-to-r from-slate-700 to-blue-700 text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105 inline-block">
+              <button onclick="switchSection('experience')" class="bg-gradient-to-r from-slate-700 to-blue-700 text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105 inline-block">
                 Experience
-              </a>
-              <a href="#showcase" class="border-2 border-slate-700 text-slate-700 px-6 py-3 rounded-xl font-medium hover:bg-slate-700 hover:text-white transition-all duration-300 inline-block">
+              </button>
+              <button onclick="switchSection('showcase')" class="border-2 border-slate-700 text-slate-700 px-6 py-3 rounded-xl font-medium hover:bg-slate-700 hover:text-white transition-all duration-300 inline-block">
                 Projects
-              </a>
+              </button>
             </div>
 
             <!-- Skills Glimpse -->
@@ -185,9 +185,9 @@
                   </div>
                 </div>
               </div>
-              <a href="#skills" class="mt-4 text-slate-700 text-sm font-medium hover:text-slate-800 transition-colors inline-block">
+              <button onclick="switchSection('skills')" class="mt-4 text-slate-700 text-sm font-medium hover:text-slate-800 transition-colors inline-block">
                 View all skills <i class="fas fa-arrow-right ml-1"></i>
-              </a>
+              </button>
             </div>
           </div>
           
@@ -1196,10 +1196,16 @@
         bch: {
           title: "Boston Children's Hospital - App Dev Specialist III",
           bullets: [
-            'Led CardioBilling & C3PO-QI system adoption by 20+ hospitals nationwide',
-            'Built comprehensive SSRS/Tableau dashboards and automated ETL workflows',
-            'Created Cath Billing tracker with AngularJS/Web API integration',
-            'Reduced manual data collection by 50% with auto-import features'
+            'Led CardioBilling enhancements and C3PO-QI development (adopted by 20+ hospitals nationwide)',
+            'Built SSRS reports and automated ETL workflows, improving efficiency',
+            'Developed Cath Billing tracker handling 100+ daily tickets',
+            'Reduced manual data collection by 50% via automation',
+            'Upgraded IQIC website using MVC, Razor, Bootstrap, and Web API',
+            'Created scheduling/cost tool in under 2 weeks for appointment staff',
+            'Integrated HL7 data into Oracle with Entity Framework-based console apps',
+            'Modernized legacy VB apps to SSIS, cutting maintenance time significantly', 
+            'Prototyped and launched major system 2 months ahead of schedule',
+            'Streamlined billing and data lookup tasks with SSIS/SSRS automation'
           ]
         },
         mgh: {
