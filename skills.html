@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Skills – Rashi Gupta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Inter', 'Manrope', 'Noto Sans', 'sans-serif'] },
+            animation: { bounceIn: 'bounceIn 0.6s ease-out' },
+            keyframes: { bounceIn: { '0%': { transform: 'scale(0.5)', opacity: '0' }, '60%': { transform: 'scale(1.05)', opacity: '1' }, '100%': { transform: 'scale(1)', opacity: '1' } } },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>.nav-link.active, .mobile-nav-link.active { background-color: rgb(241 245 249); color: rgb(51 65 85); }</style>
+  </head>
+  <body class="bg-gradient-to-br from-gray-50 via-slate-100 to-blue-50 font-sans text-gray-800 min-h-screen">
+    <nav class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-200/50">
+      <div class="max-w-6xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a href="index.html" class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center"><i class="fas fa-code text-white text-lg"></i></div>
+            <div><h1 class="text-xl font-bold text-gray-900">Rashi Gupta</h1><p class="text-xs text-gray-500">Principal Software Engineer</p></div>
+          </a>
+          <div class="hidden md:flex items-center space-x-6">
+            <a href="index.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Home</a>
+            <a href="competencies.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Competencies</a>
+            <a href="experience.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Experience</a>
+            <a href="skills.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Skills</a>
+            <a href="showcase.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Web Systems</a>
+            <a href="education.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Education</a>
+            <a href="contact.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Contact</a>
+          </div>
+          <button class="md:hidden" onclick="toggleMobileMenu()" aria-label="Menu"><i class="fas fa-bars text-gray-600"></i></button>
+        </div>
+      </div>
+    </nav>
+    <div id="mobileMenu" class="md:hidden hidden bg-white border-b border-gray-200">
+      <div class="px-6 py-4 space-y-2">
+        <a href="index.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Home</a>
+        <a href="competencies.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Competencies</a>
+        <a href="experience.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Experience</a>
+        <a href="skills.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Skills</a>
+        <a href="showcase.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Web Systems</a>
+        <a href="education.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Education</a>
+        <a href="contact.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Contact</a>
+      </div>
+    </div>
+
+    <main class="max-w-6xl mx-auto px-6 pt-5 pb-20">
+      <div class="space-y-8">
+        <div class="text-center space-y-4">
+          <h2 class="text-3xl font-bold text-gray-900">Technical Skills</h2>
+          <p class="text-gray-600">Comprehensive expertise across modern development technologies</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white rounded-2xl p-6 shadow-lg">
+            <div class="flex items-center space-x-3 mb-4"><i class="fas fa-code text-indigo-600 text-xl"></i><h3 class="text-lg font-bold text-gray-900">Frontend</h3></div>
+            <div class="space-y-2">
+              <div class="flex items-center justify-between"><span class="text-sm text-gray-600">Angular</span><div class="w-20 bg-gray-200 rounded-full h-2"><div class="bg-indigo-600 h-2 rounded-full" style="width: 90%"></div></div></div>
+              <div class="flex items-center justify-between"><span class="text-sm text-gray-600">JavaScript</span><div class="w-20 bg-gray-200 rounded-full h-2"><div class="bg-indigo-600 h-2 rounded-full" style="width: 95%"></div></div></div>
+              <div class="flex items-center justify-between"><span class="text-sm text-gray-600">React</span><div class="w-20 bg-gray-200 rounded-full h-2"><div class="bg-indigo-600 h-2 rounded-full" style="width: 50%"></div></div></div>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl p-6 shadow-lg">
+            <div class="flex items-center space-x-3 mb-4"><i class="fas fa-server text-purple-600 text-xl"></i><h3 class="text-lg font-bold text-gray-900">Backend</h3></div>
+            <div class="space-y-2">
+              <div class="flex items-center justify-between"><span class="text-sm text-gray-600">.NET Core</span><div class="w-20 bg-gray-200 rounded-full h-2"><div class="bg-purple-600 h-2 rounded-full" style="width: 95%"></div></div></div>
+              <div class="flex items-center justify-between"><span class="text-sm text-gray-600">Node.js</span><div class="w-20 bg-gray-200 rounded-full h-2"><div class="bg-purple-600 h-2 rounded-full" style="width: 85%"></div></div></div>
+              <div class="flex items-center justify-between"><span class="text-sm text-gray-600">C#</span><div class="w-20 bg-gray-200 rounded-full h-2"><div class="bg-purple-600 h-2 rounded-full" style="width: 95%"></div></div></div>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl p-6 shadow-lg">
+            <div class="flex items-center space-x-3 mb-4"><i class="fas fa-cloud text-blue-600 text-xl"></i><h3 class="text-lg font-bold text-gray-900">Cloud & DevOps</h3></div>
+            <div class="space-y-2">
+              <div class="flex items-center justify-between"><span class="text-sm text-gray-600">Azure</span><div class="w-20 bg-gray-200 rounded-full h-2"><div class="bg-blue-600 h-2 rounded-full" style="width: 75%"></div></div></div>
+              <div class="flex items-center justify-between"><span class="text-sm text-gray-600">AWS</span><div class="w-20 bg-gray-200 rounded-full h-2"><div class="bg-blue-600 h-2 rounded-full" style="width: 70%"></div></div></div>
+              <div class="flex items-center justify-between"><span class="text-sm text-gray-600">Power Platform</span><div class="w-20 bg-gray-200 rounded-full h-2"><div class="bg-blue-600 h-2 rounded-full" style="width: 80%"></div></div></div>
+            </div>
+          </div>
+        </div>
+        <button onclick="document.getElementById('skillModal').classList.remove('hidden')" class="w-full bg-gradient-to-r from-slate-700 to-blue-700 text-white py-4 rounded-xl font-medium hover:shadow-lg transition-all duration-300">View All Skills</button>
+      </div>
+    </main>
+
+    <div id="skillModal" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden flex items-center justify-center z-50">
+      <div class="bg-white rounded-2xl shadow-lg p-6 max-w-2xl w-full mx-4 max-h-[90vh] overflow-hidden flex flex-col animate-bounceIn">
+        <div class="flex justify-between items-center mb-6">
+          <h3 class="text-2xl font-bold text-gray-900">Complete Skill Set</h3>
+          <button onclick="document.getElementById('skillModal').classList.add('hidden')" class="text-2xl font-bold text-gray-500 hover:text-black transition-colors">&times;</button>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-h-96 overflow-y-auto">
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50"><i class="fab fa-js text-yellow-500"></i><span class="text-sm">JavaScript</span></div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50"><i class="fab fa-angular text-red-500"></i><span class="text-sm">Angular</span></div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50"><i class="fab fa-node-js text-green-500"></i><span class="text-sm">Node.js</span></div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50"><i class="fab fa-react text-blue-500"></i><span class="text-sm">React (basic)</span></div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50"><i class="fas fa-code text-blue-600"></i><span class="text-sm">.NET Core</span></div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50"><i class="fas fa-hashtag text-purple-600"></i><span class="text-sm">C#</span></div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50"><i class="fab fa-aws text-orange-600"></i><span class="text-sm">AWS (EC2, Lambda, S3)</span></div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50"><i class="fab fa-microsoft text-blue-600"></i><span class="text-sm">Azure</span></div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50"><i class="fas fa-database text-orange-500"></i><span class="text-sm">SQL Server</span></div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50"><i class="fas fa-database text-blue-600"></i><span class="text-sm">Oracle</span></div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50"><i class="fas fa-database text-green-600"></i><span class="text-sm">MySQL</span></div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50"><i class="fab fa-html5 text-orange-500"></i><span class="text-sm">HTML5</span></div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50"><i class="fab fa-css3-alt text-blue-500"></i><span class="text-sm">CSS3</span></div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50"><i class="fab fa-bootstrap text-purple-700"></i><span class="text-sm">Bootstrap</span></div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50"><i class="fas fa-database text-gray-600"></i><span class="text-sm">Azure SQL</span></div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50"><i class="fas fa-robot text-purple-600"></i><span class="text-sm">Power Platform</span></div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50"><i class="fas fa-brain text-orange-600"></i><span class="text-sm">Llama 2</span></div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50"><i class="fas fa-paper-plane text-orange-600"></i><span class="text-sm">Postman</span></div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50"><i class="fas fa-map text-green-600"></i><span class="text-sm">ArcGIS</span></div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50"><i class="fas fa-file-signature text-blue-600"></i><span class="text-sm">DocuSign</span></div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50"><i class="fab fa-git-alt text-orange-700"></i><span class="text-sm">TypeScript</span></div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50"><i class="fas fa-code text-gray-700"></i><span class="text-sm">Razor / MVC</span></div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50"><i class="fas fa-database text-green-600"></i><span class="text-sm">SSIS / SSRS</span></div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50"><i class="fas fa-chart-line text-blue-600"></i><span class="text-sm">Tableau</span></div>
+          <div class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50"><i class="fas fa-tools text-gray-700"></i><span class="text-sm">VS Code / Visual Studio</span></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('click', function(e) { if (e.target.id === 'skillModal') document.getElementById('skillModal').classList.add('hidden'); });
+    </script>
+
+    <footer class="border-t border-gray-200 mt-12 py-6"><div class="max-w-6xl mx-auto px-6 text-center text-sm text-gray-500">&copy; Rashi Gupta.</div></footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

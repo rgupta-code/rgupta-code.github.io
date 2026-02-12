@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Education – Rashi Gupta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'Manrope', 'Noto Sans', 'sans-serif'] } } } };</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>.nav-link.active, .mobile-nav-link.active { background-color: rgb(241 245 249); color: rgb(51 65 85); }</style>
+  </head>
+  <body class="bg-gradient-to-br from-gray-50 via-slate-100 to-blue-50 font-sans text-gray-800 min-h-screen">
+    <nav class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-200/50">
+      <div class="max-w-6xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a href="index.html" class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center"><i class="fas fa-code text-white text-lg"></i></div>
+            <div><h1 class="text-xl font-bold text-gray-900">Rashi Gupta</h1><p class="text-xs text-gray-500">Principal Software Engineer</p></div>
+          </a>
+          <div class="hidden md:flex items-center space-x-6">
+            <a href="index.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Home</a>
+            <a href="competencies.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Competencies</a>
+            <a href="experience.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Experience</a>
+            <a href="skills.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Skills</a>
+            <a href="showcase.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Web Systems</a>
+            <a href="education.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Education</a>
+            <a href="contact.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Contact</a>
+          </div>
+          <button class="md:hidden" onclick="toggleMobileMenu()" aria-label="Menu"><i class="fas fa-bars text-gray-600"></i></button>
+        </div>
+      </div>
+    </nav>
+    <div id="mobileMenu" class="md:hidden hidden bg-white border-b border-gray-200">
+      <div class="px-6 py-4 space-y-2">
+        <a href="index.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Home</a>
+        <a href="competencies.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Competencies</a>
+        <a href="experience.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Experience</a>
+        <a href="skills.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Skills</a>
+        <a href="showcase.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Web Systems</a>
+        <a href="education.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Education</a>
+        <a href="contact.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Contact</a>
+      </div>
+    </div>
+
+    <main class="max-w-6xl mx-auto px-6 pt-5 pb-20">
+      <!-- Professional Summary -->
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Professional Summary</h2>
+        <div class="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-indigo-500">
+          <p class="text-gray-700 leading-relaxed">
+            Principal Software Engineer with 10+ years of experience delivering full stack solutions across healthcare, media, and aviation. Strong track record in system architecture, .NET and Angular ecosystems, cloud (Azure, AWS), and leading upgrades and new product development. Proven ability to mentor teams, meet deadlines with zero regressions, and drive performance improvements (e.g., page load 2 min → 2 sec). Experienced in modernizing legacy systems, API design, and adopting tools (Postman, Power Platform, LLM/RAG) to increase productivity.
+          </p>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Education</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all border-l-4 border-blue-500">
+            <div class="flex items-center space-x-3 mb-3">
+              <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center"><i class="fas fa-graduation-cap text-blue-600 text-xl"></i></div>
+              <h3 class="text-lg font-bold text-gray-900">MS in Textile Engineering</h3>
+            </div>
+            <p class="text-gray-600 font-medium">IIT Delhi, India</p>
+            <p class="text-sm text-gray-500 mt-1">Graduate degree in engineering</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all border-l-4 border-green-500">
+            <div class="flex items-center space-x-3 mb-3">
+              <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center"><i class="fas fa-university text-green-600 text-xl"></i></div>
+              <h3 class="text-lg font-bold text-gray-900">BS in Textile Technology</h3>
+            </div>
+            <p class="text-gray-600 font-medium">UP Technical University, India</p>
+            <p class="text-sm text-gray-500 mt-1">Undergraduate degree</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div>
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Certifications</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all border-l-4 border-orange-500">
+            <div class="flex items-center space-x-3 mb-3">
+              <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center"><i class="fas fa-award text-orange-600 text-xl"></i></div>
+              <h3 class="text-lg font-bold text-gray-900">Oracle Certified Associate</h3>
+            </div>
+            <p class="text-gray-600 text-sm">Oracle University</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all border-l-4 border-slate-500">
+            <div class="flex items-center space-x-3 mb-3">
+              <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center"><i class="fas fa-certificate text-slate-600 text-xl"></i></div>
+              <h3 class="text-lg font-bold text-gray-900">Professional Experience</h3>
+            </div>
+            <p class="text-gray-600 text-sm">10+ years in software development; healthcare, media, and federal domains</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all border-l-4 border-purple-500">
+            <div class="flex items-center space-x-3 mb-3">
+              <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center"><i class="fas fa-code text-purple-600 text-xl"></i></div>
+              <h3 class="text-lg font-bold text-gray-900">Technical Expertise</h3>
+            </div>
+            <p class="text-gray-600 text-sm">.NET Core, Angular, Azure, SQL Server, Power Platform, API integration</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="border-t border-gray-200 mt-12 py-6"><div class="max-w-6xl mx-auto px-6 text-center text-sm text-gray-500">&copy; Rashi Gupta.</div></footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

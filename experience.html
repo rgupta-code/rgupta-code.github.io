@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Experience – Rashi Gupta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Inter', 'Manrope', 'Noto Sans', 'sans-serif'] },
+            animation: { bounceIn: 'bounceIn 0.6s ease-out' },
+            keyframes: { bounceIn: { '0%': { transform: 'scale(0.5)', opacity: '0' }, '60%': { transform: 'scale(1.05)', opacity: '1' }, '100%': { transform: 'scale(1)', opacity: '1' } } },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>.nav-link.active, .mobile-nav-link.active { background-color: rgb(241 245 249); color: rgb(51 65 85); }</style>
+  </head>
+  <body class="bg-gradient-to-br from-gray-50 via-slate-100 to-blue-50 font-sans text-gray-800 min-h-screen">
+    <nav class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-200/50">
+      <div class="max-w-6xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a href="index.html" class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center"><i class="fas fa-code text-white text-lg"></i></div>
+            <div><h1 class="text-xl font-bold text-gray-900">Rashi Gupta</h1><p class="text-xs text-gray-500">Principal Software Engineer</p></div>
+          </a>
+          <div class="hidden md:flex items-center space-x-6">
+            <a href="index.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Home</a>
+            <a href="competencies.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Competencies</a>
+            <a href="experience.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Experience</a>
+            <a href="skills.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Skills</a>
+            <a href="showcase.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Web Systems</a>
+            <a href="education.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Education</a>
+            <a href="contact.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Contact</a>
+          </div>
+          <button class="md:hidden" onclick="toggleMobileMenu()" aria-label="Menu"><i class="fas fa-bars text-gray-600"></i></button>
+        </div>
+      </div>
+    </nav>
+    <div id="mobileMenu" class="md:hidden hidden bg-white border-b border-gray-200">
+      <div class="px-6 py-4 space-y-2">
+        <a href="index.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Home</a>
+        <a href="competencies.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Competencies</a>
+        <a href="experience.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Experience</a>
+        <a href="skills.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Skills</a>
+        <a href="showcase.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Web Systems</a>
+        <a href="education.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Education</a>
+        <a href="contact.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Contact</a>
+      </div>
+    </div>
+
+    <main class="max-w-6xl mx-auto px-6 pt-5 pb-20">
+      <div class="space-y-8">
+        <div class="text-center space-y-4">
+          <h2 class="text-3xl font-bold text-gray-900">Professional Experience</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">A journey through diverse roles in healthcare, media, and aviation technology</p>
+        </div>
+        <div class="grid gap-6">
+          <div onclick="openExperienceModal('kbr')" class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-l-4 border-indigo-500">
+            <div class="flex items-start justify-between">
+              <div class="space-y-2">
+                <h3 class="text-xl font-bold text-gray-900">Principal Software Engineer</h3>
+                <p class="text-indigo-600 font-medium">KBR / FAA</p>
+                <p class="text-gray-500">2018 – Present</p>
+              </div>
+              <div class="bg-indigo-100 p-3 rounded-xl"><i class="fas fa-plane text-indigo-600 text-xl"></i></div>
+            </div>
+          </div>
+          <div onclick="openExperienceModal('tr')" class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-l-4 border-purple-500">
+            <div class="flex items-start justify-between">
+              <div class="space-y-2">
+                <h3 class="text-xl font-bold text-gray-900">Senior Software Engineer</h3>
+                <p class="text-purple-600 font-medium">Thomson Reuters</p>
+                <p class="text-gray-500">2018</p>
+              </div>
+              <div class="bg-purple-100 p-3 rounded-xl"><i class="fas fa-newspaper text-purple-600 text-xl"></i></div>
+            </div>
+          </div>
+          <div onclick="openExperienceModal('bch')" class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-l-4 border-green-500">
+            <div class="flex items-start justify-between">
+              <div class="space-y-2">
+                <h3 class="text-xl font-bold text-gray-900">App Dev Specialist III</h3>
+                <p class="text-green-600 font-medium">Boston Children's Hospital</p>
+                <p class="text-gray-500">2012 – 2018</p>
+              </div>
+              <div class="bg-green-100 p-3 rounded-xl"><i class="fas fa-hospital text-green-600 text-xl"></i></div>
+            </div>
+          </div>
+          <div onclick="openExperienceModal('mgh')" class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-l-4 border-blue-500">
+            <div class="flex items-start justify-between">
+              <div class="space-y-2">
+                <h3 class="text-xl font-bold text-gray-900">Info Support Coordinator</h3>
+                <p class="text-blue-600 font-medium">Massachusetts General Hospital</p>
+                <p class="text-gray-500">2010 – 2015</p>
+              </div>
+              <div class="bg-blue-100 p-3 rounded-xl"><i class="fas fa-user-md text-blue-600 text-xl"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="experienceModal" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden flex items-center justify-center z-50">
+      <div class="bg-white rounded-2xl shadow-lg p-6 max-w-2xl w-full mx-4 animate-bounceIn">
+        <div class="flex justify-between items-center mb-6">
+          <h3 class="text-2xl font-bold text-gray-900" id="expTitle">Experience</h3>
+          <button onclick="closeExperienceModal()" class="text-2xl font-bold text-gray-500 hover:text-black transition-colors">&times;</button>
+        </div>
+        <ul id="expDetails" class="space-y-3 text-gray-700"></ul>
+      </div>
+    </div>
+
+    <footer class="border-t border-gray-200 mt-12 py-6"><div class="max-w-6xl mx-auto px-6 text-center text-sm text-gray-500">&copy; Rashi Gupta.</div></footer>
+    <script src="js/main.js"></script>
+    <script>
+      var experienceData = {
+        kbr: { title: 'KBR / FAA - Principal Software Engineer', bullets: ['Built low-code Canvas app in PowerApps for FAA operations', 'Led .NET 8 upgrade, completed 2 weeks early with zero downtime', 'Enhanced user experience by embedding interactive ArcGIS Maps into Angular apps', 'Integrated DocuSign API into the application to support end-to-end digital document signing', 'Improved page load performance from 2 minutes to 2 seconds using hashmap optimization', 'Cut API testing time by 10x using Postman automation', 'Replaced legacy stored procedures with modern LINQ-based data access using Entity Framework Core', 'Resolved critical bugs before release deadlines', 'Delivered 4-month feature in 4 weeks using OOP principles', 'Created AI-powered chat application using Llama 2 & RAG architecture'] },
+        tr: { title: 'Thomson Reuters - Senior Software Engineer', bullets: ['Developed eBillingHub system, processing 4M+ invoices annually', 'Mastered legacy technologies quickly to meet urgent project deadlines', 'Maintained 100% unit test coverage across all modules', 'Advanced Azure PaaS expertise to finish projects ahead of schedule'] },
+        bch: { title: "Boston Children's Hospital - App Dev Specialist III", bullets: ['Led CardioBilling enhancements and C3PO-QI development (adopted by 20+ hospitals nationwide)', 'Built SSRS reports and automated ETL workflows, improving efficiency', 'Developed Cath Billing tracker handling 100+ daily tickets', 'Reduced manual data collection by 50% via automation', 'Upgraded IQIC website using MVC, Razor, Bootstrap, and Web API', 'Created scheduling/cost tool in under 2 weeks for appointment staff', 'Integrated HL7 data into Oracle with Entity Framework-based console apps', 'Modernized legacy VB apps to SSIS, cutting maintenance time significantly', 'Prototyped and launched major system 2 months ahead of schedule', 'Streamlined billing and data lookup tasks with SSIS/SSRS automation'] },
+        mgh: { title: 'Massachusetts General Hospital - Info Support Coordinator', bullets: ['Developed IVR Health Talker using VXML/.NET for patient communication', 'Successfully migrated systems to Azure cloud platform', 'Handled 200K+ automated calls in a single month'] }
+      };
+      function openExperienceModal(company) {
+        var data = experienceData[company];
+        document.getElementById('expTitle').textContent = data.title;
+        document.getElementById('expDetails').innerHTML = data.bullets.map(function(item) { return '<li class="flex items-start space-x-3"><i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0"></i><span>' + item + '</span></li>'; }).join('');
+        document.getElementById('experienceModal').classList.remove('hidden');
+      }
+      function closeExperienceModal() { document.getElementById('experienceModal').classList.add('hidden'); }
+      document.addEventListener('click', function(e) { if (e.target.id === 'experienceModal') closeExperienceModal(); });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Systems – Rashi Gupta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'Manrope', 'Noto Sans', 'sans-serif'] } } } };</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>.nav-link.active, .mobile-nav-link.active { background-color: rgb(241 245 249); color: rgb(51 65 85); }</style>
+  </head>
+  <body class="bg-gradient-to-br from-gray-50 via-slate-100 to-blue-50 font-sans text-gray-800 min-h-screen">
+    <nav class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-200/50">
+      <div class="max-w-6xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a href="index.html" class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center"><i class="fas fa-code text-white text-lg"></i></div>
+            <div><h1 class="text-xl font-bold text-gray-900">Rashi Gupta</h1><p class="text-xs text-gray-500">Principal Software Engineer</p></div>
+          </a>
+          <div class="hidden md:flex items-center space-x-6">
+            <a href="index.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Home</a>
+            <a href="competencies.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Competencies</a>
+            <a href="experience.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Experience</a>
+            <a href="skills.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Skills</a>
+            <a href="showcase.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Web Systems</a>
+            <a href="education.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Education</a>
+            <a href="contact.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Contact</a>
+          </div>
+          <button class="md:hidden" onclick="toggleMobileMenu()" aria-label="Menu"><i class="fas fa-bars text-gray-600"></i></button>
+        </div>
+      </div>
+    </nav>
+    <div id="mobileMenu" class="md:hidden hidden bg-white border-b border-gray-200">
+      <div class="px-6 py-4 space-y-2">
+        <a href="index.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Home</a>
+        <a href="competencies.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Competencies</a>
+        <a href="experience.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Experience</a>
+        <a href="skills.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Skills</a>
+        <a href="showcase.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Web Systems</a>
+        <a href="education.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Education</a>
+        <a href="contact.html" class="mobile-nav-link block py-2 px-3 rounded-lg">Contact</a>
+      </div>
+    </div>
+
+    <main class="max-w-6xl mx-auto px-6 pt-5 pb-20">
+      <div class="space-y-8">
+        <div class="text-center space-y-4">
+          <h2 class="text-3xl font-bold text-gray-900">Web Systems Showcase</h2>
+          <p class="text-gray-600">Interactive demos of systems I've developed and contributed to</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- With iframe: h-[300px] -->
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative">
+            <a href="https://rgupta-code.github.io/AnalyticsTools/" target="_blank" rel="noopener noreferrer" class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm rounded-lg p-2 shadow-lg"><i class="fas fa-external-link-alt text-gray-600 text-sm"></i></a>
+            <div class="p-6 border-b border-gray-100">
+              <h3 class="text-xl font-bold text-gray-900">Analytics Tools</h3>
+              <p class="text-gray-600 text-sm mt-2">Interactive analytics and data visualization tools</p>
+            </div>
+            <div class="w-full h-[300px] overflow-hidden">
+              <iframe src="https://rgupta-code.github.io/AnalyticsTools/" class="w-full h-full border-0" title="Analytics Tools" style="transform: scale(0.3); transform-origin: top left; width: 333.33%; height: 333.33%;"></iframe>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative">
+            <a href="https://rgupta-code.github.io/StoryBuilder/" target="_blank" rel="noopener noreferrer" class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm rounded-lg p-2 shadow-lg"><i class="fas fa-external-link-alt text-gray-600 text-sm"></i></a>
+            <div class="p-6 border-b border-gray-100">
+              <h3 class="text-xl font-bold text-gray-900">Story Builder</h3>
+              <p class="text-gray-600 text-sm mt-2">Interactive story creation and narrative building platform</p>
+            </div>
+            <div class="w-full h-[300px] overflow-hidden">
+              <iframe src="https://rgupta-code.github.io/StoryBuilder/" class="w-full h-full border-0" title="Story Builder" style="transform: scale(0.3); transform-origin: top left; width: 333.33%; height: 333.33%;"></iframe>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative">
+            <a href="https://rgupta-code.github.io/HTMLSnippets/" target="_blank" rel="noopener noreferrer" class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm rounded-lg p-2 shadow-lg"><i class="fas fa-external-link-alt text-gray-600 text-sm"></i></a>
+            <div class="p-6 border-b border-gray-100">
+              <h3 class="text-xl font-bold text-gray-900">HTML Snippets</h3>
+              <p class="text-gray-600 text-sm mt-2">Collection of reusable HTML components and code snippets</p>
+            </div>
+            <div class="w-full h-[300px] overflow-hidden">
+              <iframe src="https://rgupta-code.github.io/HTMLSnippets/" class="w-full h-full border-0" title="HTML Snippets" style="transform: scale(0.3); transform-origin: top left; width: 333.33%; height: 333.33%;"></iframe>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative">
+            <a href="https://rgupta-code.github.io/TestAppForAI/" target="_blank" rel="noopener noreferrer" class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm rounded-lg p-2 shadow-lg"><i class="fas fa-external-link-alt text-gray-600 text-sm"></i></a>
+            <div class="p-6 border-b border-gray-100">
+              <h3 class="text-xl font-bold text-gray-900">Online Chess</h3>
+              <p class="text-gray-600 text-sm mt-2">Interactive chess game with AI opponent</p>
+            </div>
+            <div class="w-full h-[300px] overflow-hidden">
+              <iframe src="https://rgupta-code.github.io/TestAppForAI/" class="w-full h-full border-0" title="Online Chess" style="transform: scale(0.3); transform-origin: top left; width: 333.33%; height: 333.33%;"></iframe>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative">
+            <a href="https://rgupta-code.github.io/ContentCreator/" target="_blank" rel="noopener noreferrer" class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm rounded-lg p-2 shadow-lg"><i class="fas fa-external-link-alt text-gray-600 text-sm"></i></a>
+            <div class="p-6 border-b border-gray-100">
+              <h3 class="text-xl font-bold text-gray-900">Content Creator</h3>
+              <p class="text-gray-600 text-sm mt-2">Create and manage content interactively</p>
+            </div>
+            <div class="w-full h-[300px] overflow-hidden">
+              <iframe src="https://rgupta-code.github.io/ContentCreator/" class="w-full h-full border-0" title="Content Creator" style="transform: scale(0.3); transform-origin: top left; width: 333.33%; height: 333.33%;"></iframe>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative">
+            <a href="https://rgupta-code.github.io/MathFactAppForKid/" target="_blank" rel="noopener noreferrer" class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm rounded-lg p-2 shadow-lg"><i class="fas fa-external-link-alt text-gray-600 text-sm"></i></a>
+            <div class="p-6 border-b border-gray-100">
+              <h3 class="text-xl font-bold text-gray-900">Math Fact App for Kids</h3>
+              <p class="text-gray-600 text-sm mt-2">Fun math facts and quizzes for children</p>
+            </div>
+            <div class="w-full h-[300px] overflow-hidden">
+              <iframe src="https://rgupta-code.github.io/MathFactAppForKid/" class="w-full h-full border-0" title="Math Fact App for Kids" style="transform: scale(0.3); transform-origin: top left; width: 333.33%; height: 333.33%;"></iframe>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative">
+            <a href="https://rgupta-code.github.io/KidSocial/" target="_blank" rel="noopener noreferrer" class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm rounded-lg p-2 shadow-lg"><i class="fas fa-external-link-alt text-gray-600 text-sm"></i></a>
+            <div class="p-6 border-b border-gray-100">
+              <h3 class="text-xl font-bold text-gray-900">Kid Social</h3>
+              <p class="text-gray-600 text-sm mt-2">Social platform designed for children</p>
+            </div>
+            <div class="w-full h-[300px] overflow-hidden">
+              <iframe src="https://rgupta-code.github.io/KidSocial/" class="w-full h-full border-0" title="Kid Social" style="transform: scale(0.3); transform-origin: top left; width: 333.33%; height: 333.33%;"></iframe>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative">
+            <a href="https://rgupta-code.github.io/HangmanApp/" target="_blank" rel="noopener noreferrer" class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm rounded-lg p-2 shadow-lg"><i class="fas fa-external-link-alt text-gray-600 text-sm"></i></a>
+            <div class="p-6 border-b border-gray-100">
+              <h3 class="text-xl font-bold text-gray-900">Hangman App</h3>
+              <p class="text-gray-600 text-sm mt-2">Classic hangman word guessing game</p>
+            </div>
+            <div class="w-full h-[300px] overflow-hidden">
+              <iframe src="https://rgupta-code.github.io/HangmanApp/" class="w-full h-full border-0" title="Hangman App" style="transform: scale(0.3); transform-origin: top left; width: 333.33%; height: 333.33%;"></iframe>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative">
+            <a href="https://rgupta-code.github.io/ShoppingAppForKid/" target="_blank" rel="noopener noreferrer" class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm rounded-lg p-2 shadow-lg"><i class="fas fa-external-link-alt text-gray-600 text-sm"></i></a>
+            <div class="p-6 border-b border-gray-100">
+              <h3 class="text-xl font-bold text-gray-900">Shopping App for Kids</h3>
+              <p class="text-gray-600 text-sm mt-2">Child-friendly shopping experience</p>
+            </div>
+            <div class="w-full h-[300px] overflow-hidden">
+              <iframe src="https://rgupta-code.github.io/ShoppingAppForKid/" class="w-full h-full border-0" title="Shopping App for Kids" style="transform: scale(0.3); transform-origin: top left; width: 333.33%; height: 333.33%;"></iframe>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative">
+            <a href="https://rgupta-code.github.io/NewsApp/" target="_blank" rel="noopener noreferrer" class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm rounded-lg p-2 shadow-lg"><i class="fas fa-external-link-alt text-gray-600 text-sm"></i></a>
+            <div class="p-6 border-b border-gray-100">
+              <h3 class="text-xl font-bold text-gray-900">News App</h3>
+              <p class="text-gray-600 text-sm mt-2">News and articles application</p>
+            </div>
+            <div class="w-full h-[300px] overflow-hidden">
+              <iframe src="https://rgupta-code.github.io/NewsApp/" class="w-full h-full border-0" title="News App" style="transform: scale(0.3); transform-origin: top left; width: 333.33%; height: 333.33%;"></iframe>
+            </div>
+          </div>
+
+          <!-- No demo – display window 30% height (30% of 300px = 90px) -->
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-100">
+              <h3 class="text-xl font-bold text-gray-900">Canvas PowerApp</h3>
+              <p class="text-gray-600 text-sm mt-2">Low-code Canvas application built in PowerApps for FAA operations</p>
+            </div>
+            <div class="min-h-[90px] h-[30%] max-h-[90px] bg-gray-100 flex items-center justify-center">
+              <div class="text-center space-y-1 py-4"><i class="fas fa-external-link-alt text-2xl text-gray-400"></i><p class="text-gray-500 text-sm">Demo not available</p><p class="text-xs text-gray-400">Internal FAA system</p></div>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-100">
+              <h3 class="text-xl font-bold text-gray-900">eBillingHub</h3>
+              <p class="text-gray-600 text-sm mt-2">Invoice processing system handling 4M+ invoices annually</p>
+            </div>
+            <div class="min-h-[90px] h-[30%] max-h-[90px] bg-gray-100 flex items-center justify-center">
+              <div class="text-center space-y-1 py-4"><i class="fas fa-lock text-2xl text-gray-400"></i><p class="text-gray-500 text-sm">Private System</p><p class="text-xs text-gray-400">Thomson Reuters internal</p></div>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-100">
+              <h3 class="text-xl font-bold text-gray-900">CardioBilling System</h3>
+              <p class="text-gray-600 text-sm mt-2">Cardiology billing system adopted by 20+ hospitals</p>
+            </div>
+            <div class="min-h-[90px] h-[30%] max-h-[90px] bg-gray-100 flex items-center justify-center">
+              <div class="text-center space-y-1 py-4"><i class="fas fa-hospital text-2xl text-gray-400"></i><p class="text-gray-500 text-sm">Healthcare System</p><p class="text-xs text-gray-400">Boston Children's Hospital</p></div>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-100">
+              <h3 class="text-xl font-bold text-gray-900">Chat Application</h3>
+              <p class="text-gray-600 text-sm mt-2">AI chat app using Llama 2 & RAG architecture</p>
+            </div>
+            <div class="min-h-[90px] h-[30%] max-h-[90px] bg-gray-100 flex items-center justify-center">
+              <div class="text-center space-y-1 py-4"><i class="fas fa-comments text-2xl text-gray-400"></i><p class="text-gray-500 text-sm">AI Chat Demo</p><p class="text-xs text-gray-400">FAA Internal Tool</p></div>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-100">
+              <h3 class="text-xl font-bold text-gray-900">IVR Health Talker</h3>
+              <p class="text-gray-600 text-sm mt-2">Interactive Voice Response system for healthcare</p>
+            </div>
+            <div class="min-h-[90px] h-[30%] max-h-[90px] bg-gray-100 flex items-center justify-center">
+              <div class="text-center space-y-1 py-4"><i class="fas fa-phone-alt text-2xl text-gray-400"></i><p class="text-gray-500 text-sm">Voice System</p><p class="text-xs text-gray-400">200K+ calls monthly</p></div>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-100">
+              <h3 class="text-xl font-bold text-gray-900">ArcGIS Integration</h3>
+              <p class="text-gray-600 text-sm mt-2">Geospatial mapping integration in Angular applications</p>
+            </div>
+            <div class="min-h-[90px] h-[30%] max-h-[90px] bg-gray-100 flex items-center justify-center">
+              <div class="text-center space-y-1 py-4"><i class="fas fa-map-marked-alt text-2xl text-gray-400"></i><p class="text-gray-500 text-sm">Mapping System</p><p class="text-xs text-gray-400">FAA Operations</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="border-t border-gray-200 mt-12 py-6"><div class="max-w-6xl mx-auto px-6 text-center text-sm text-gray-500">&copy; Rashi Gupta.</div></footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
