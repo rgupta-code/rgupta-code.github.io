@@ -24,7 +24,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
       .nav-link.active, .mobile-nav-link.active { background-color: rgb(241 245 249); color: rgb(51 65 85); }
-      .achievements-carousel { position: relative; min-height: 400px; overflow: hidden; max-width: 440px; }
+      .achievements-carousel-wrap { max-width: 440px; width: 100%; }
+      .achievements-carousel { position: relative; min-height: 400px; overflow: hidden; }
       .carousel-slide {
         position: absolute;
         top: 0; left: 0;
@@ -76,7 +77,7 @@
             <a href="competencies.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Competencies</a>
             <a href="experience.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Experience</a>
             <a href="skills.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Skills</a>
-            <a href="showcase.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Web Systems</a>
+            <a href="showcase.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Projects</a>
             <a href="education.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Education</a>
             <a href="contact.html" class="nav-link text-sm font-medium transition-colors hover:text-slate-700">Contact</a>
           </div>
@@ -90,7 +91,7 @@
         <a href="competencies.html" class="mobile-nav-link block py-2 px-3 rounded-lg transition-colors">Competencies</a>
         <a href="experience.html" class="mobile-nav-link block py-2 px-3 rounded-lg transition-colors">Experience</a>
         <a href="skills.html" class="mobile-nav-link block py-2 px-3 rounded-lg transition-colors">Skills</a>
-        <a href="showcase.html" class="mobile-nav-link block py-2 px-3 rounded-lg transition-colors">Web Systems</a>
+        <a href="showcase.html" class="mobile-nav-link block py-2 px-3 rounded-lg transition-colors">Projects</a>
         <a href="education.html" class="mobile-nav-link block py-2 px-3 rounded-lg transition-colors">Education</a>
         <a href="contact.html" class="mobile-nav-link block py-2 px-3 rounded-lg transition-colors">Contact</a>
       </div>
@@ -105,7 +106,7 @@
             <span class="bg-gradient-to-r from-slate-700 to-blue-700 bg-clip-text text-transparent">Technical Leader</span>
           </h2>
           <p class="text-lg text-gray-600 leading-relaxed">
-            Principal Software Engineer with deep expertise in full stack development, system architecture, and leading large-scale digital solutions. Passionate about mentoring, problem-solving, and continuous improvement across SDLC and cloud platforms.
+            Principal Software Engineer with deep expertise in full stack development, system architecture, and leading large-scale digital solutions. Passionate about automating repetitive tasks, problem-solving, and continuous improvement across SDLC.
           </p>
           <div class="flex items-center space-x-4">
             <div class="flex items-center space-x-2 text-gray-600"><i class="fas fa-map-marker-alt text-slate-600"></i><span>Boston, MA</span></div>
@@ -115,19 +116,10 @@
             <a href="experience.html" class="bg-gradient-to-r from-slate-700 to-blue-700 text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-300 inline-block">Experience</a>
             <a href="showcase.html" class="border-2 border-slate-700 text-slate-700 px-6 py-3 rounded-xl font-medium hover:bg-slate-700 hover:text-white transition-all duration-300 inline-block">Projects</a>
           </div>
-          <div class="mt-8">
-            <h3 class="text-lg font-semibold text-gray-800 mb-4">Key Technologies</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-              <div class="bg-white/80 backdrop-blur-sm rounded-lg p-3 border border-gray-200/50"><div class="flex items-center space-x-2"><i class="fab fa-angular text-red-500 text-lg"></i><span class="text-sm font-medium text-gray-700">Angular</span></div></div>
-              <div class="bg-white/80 backdrop-blur-sm rounded-lg p-3 border border-gray-200/50"><div class="flex items-center space-x-2"><i class="fas fa-code text-blue-600 text-lg"></i><span class="text-sm font-medium text-gray-700">.NET Core</span></div></div>
-              <div class="bg-white/80 backdrop-blur-sm rounded-lg p-3 border border-gray-200/50"><div class="flex items-center space-x-2"><i class="fab fa-microsoft text-blue-500 text-lg"></i><span class="text-sm font-medium text-gray-700">Azure</span></div></div>
-              <div class="bg-white/80 backdrop-blur-sm rounded-lg p-3 border border-gray-200/50"><div class="flex items-center space-x-2"><i class="fas fa-database text-green-600 text-lg"></i><span class="text-sm font-medium text-gray-700">SQL Server</span></div></div>
-            </div>
-            <a href="skills.html" class="mt-4 text-slate-700 text-sm font-medium hover:text-slate-800 transition-colors inline-block">View all skills <i class="fas fa-arrow-right ml-1"></i></a>
-          </div>
         </div>
-        <div class="relative -mt-2">
+        <div class="relative mt-8 ml-12 lg:ml-20">
           <div class="flex items-center space-x-3 mb-3"><i class="fas fa-trophy text-2xl text-amber-500"></i><h3 class="text-xl font-bold text-slate-800">Key Achievements</h3></div>
+          <div class="achievements-carousel-wrap">
           <div class="achievements-carousel" id="achievementsCarousel">
             <div class="carousel-slide active">
               <div class="slide-cards">
@@ -183,7 +175,20 @@
             </div>
           </div>
           <div class="carousel-dots" id="carouselDots"></div>
+          </div>
         </div>
+      </div>
+
+      <!-- Key Technologies -->
+      <div class="mt-12">
+        <h3 class="text-lg font-semibold text-gray-800 mb-4">Key Technologies</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <div class="bg-white/80 backdrop-blur-sm rounded-lg p-3 border border-gray-200/50"><div class="flex items-center space-x-2"><i class="fab fa-angular text-red-500 text-lg"></i><span class="text-sm font-medium text-gray-700">Angular</span></div></div>
+          <div class="bg-white/80 backdrop-blur-sm rounded-lg p-3 border border-gray-200/50"><div class="flex items-center space-x-2"><i class="fas fa-code text-blue-600 text-lg"></i><span class="text-sm font-medium text-gray-700">.NET Core</span></div></div>
+          <div class="bg-white/80 backdrop-blur-sm rounded-lg p-3 border border-gray-200/50"><div class="flex items-center space-x-2"><i class="fab fa-microsoft text-blue-500 text-lg"></i><span class="text-sm font-medium text-gray-700">Azure</span></div></div>
+          <div class="bg-white/80 backdrop-blur-sm rounded-lg p-3 border border-gray-200/50"><div class="flex items-center space-x-2"><i class="fas fa-database text-green-600 text-lg"></i><span class="text-sm font-medium text-gray-700">SQL Server</span></div></div>
+        </div>
+        <a href="skills.html" class="mt-4 text-slate-700 text-sm font-medium hover:text-slate-800 transition-colors inline-block">View all skills <i class="fas fa-arrow-right ml-1"></i></a>
       </div>
 
       <!-- Explore section -->
@@ -204,7 +209,7 @@
           </a>
           <a href="showcase.html" class="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-all border-l-4 border-orange-500 flex items-center space-x-3">
             <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center"><i class="fas fa-globe text-orange-600"></i></div>
-            <div><span class="font-semibold text-gray-900">Web Systems</span><br><span class="text-sm text-gray-500">Demos & apps</span></div>
+            <div><span class="font-semibold text-gray-900">Projects</span><br><span class="text-sm text-gray-500">Demos & apps</span></div>
           </a>
           <a href="education.html" class="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-all border-l-4 border-teal-500 flex items-center space-x-3">
             <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center"><i class="fas fa-graduation-cap text-teal-600"></i></div>
